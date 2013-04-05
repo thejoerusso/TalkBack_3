@@ -31,10 +31,15 @@
         // Report error
     }
     
-    //turn playthrough on
+    //Turn playthrough on
     self.playthrough = [[AEPlaythroughChannel alloc] initWithAudioController:_audioController];
     [_audioController addInputReceiver:_playthrough];
     [_audioController addChannels:[NSArray arrayWithObject:_playthrough]];
+    
+    //but keep it muted
+    _playthrough.channelIsMuted=YES;
+
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,4 +48,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)tbButton:(id)sender {
+    
+    UIButton *button = (UIButton *)sender;
+    if (button.selected==NO) {
+        button.selected=YES;
+        //unmute
+        _playthrough.channelIsMuted=NO;
+
+    }
+    
+    else{
+        button.selected=NO;
+        _playthrough.channelIsMuted=YES;
+    }
+    
+}
 @end

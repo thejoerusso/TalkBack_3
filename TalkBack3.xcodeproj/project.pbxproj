@@ -30,6 +30,10 @@
 		D83866E9170F179300491062 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = D83866DE170F179300491062 /* README.markdown */; };
 		D83866EA170F179300491062 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = D83866DF170F179300491062 /* TPCircularBuffer+AudioBufferList.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D83866EB170F179300491062 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = D83866E1170F179300491062 /* TPCircularBuffer.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D83866F1170F1DDD00491062 /* BUTTON 1.png in Resources */ = {isa = PBXBuildFile; fileRef = D83866ED170F1DDD00491062 /* BUTTON 1.png */; };
+		D83866F2170F1DDD00491062 /* BUTTON 2.png in Resources */ = {isa = PBXBuildFile; fileRef = D83866EE170F1DDD00491062 /* BUTTON 2.png */; };
+		D83866F3170F1DDD00491062 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D83866EF170F1DDD00491062 /* icon.png */; };
+		D83866F4170F1DDD00491062 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D83866F0170F1DDD00491062 /* icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +90,10 @@
 		D83866E0170F179300491062 /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
 		D83866E1170F179300491062 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
 		D83866E2170F179300491062 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
+		D83866ED170F1DDD00491062 /* BUTTON 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BUTTON 1.png"; sourceTree = SOURCE_ROOT; };
+		D83866EE170F1DDD00491062 /* BUTTON 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BUTTON 2.png"; sourceTree = SOURCE_ROOT; };
+		D83866EF170F1DDD00491062 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = SOURCE_ROOT; };
+		D83866F0170F1DDD00491062 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +160,10 @@
 		D83866A7170F162400491062 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D83866ED170F1DDD00491062 /* BUTTON 1.png */,
+				D83866EE170F1DDD00491062 /* BUTTON 2.png */,
+				D83866EF170F1DDD00491062 /* icon.png */,
+				D83866F0170F1DDD00491062 /* icon@2x.png */,
 				D83866A8170F162400491062 /* TalkBack3-Info.plist */,
 				D83866A9170F162400491062 /* InfoPlist.strings */,
 				D83866AC170F162400491062 /* main.m */,
@@ -278,6 +290,10 @@
 				D83866B7170F162400491062 /* Default-568h@2x.png in Resources */,
 				D83866BA170F162400491062 /* MainStoryboard.storyboard in Resources */,
 				D83866E9170F179300491062 /* README.markdown in Resources */,
+				D83866F1170F1DDD00491062 /* BUTTON 1.png in Resources */,
+				D83866F2170F1DDD00491062 /* BUTTON 2.png in Resources */,
+				D83866F3170F1DDD00491062 /* icon.png in Resources */,
+				D83866F4170F1DDD00491062 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,5 +11,6 @@
 #import "TheAmazingAudioEngine.h"
 
 @interface talkBackViewController : UIViewController
+- (IBAction)tbButton:(id)sender;
 
 @end
