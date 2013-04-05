@@ -12,5 +12,7 @@
 
 @interface talkBackViewController : UIViewController
 - (IBAction)tbButton:(id)sender;
+- (IBAction)level:(id)sender;
 
 @end
+

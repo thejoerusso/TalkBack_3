@@ -29,11 +29,40 @@
                                     <action selector="tbButton:" destination="2" eventType="touchDown" id="Bnd-3F-R4A"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="TALK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8f-uc-NTE">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.50596859100000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="LEVEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjT-dW-OTh">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="H65-gx-Na6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.75" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Cc9-OA-A7e">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="MOc-QI-xr9"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <connections>
+                                    <action selector="level:" destination="2" eventType="valueChanged" id="FFJ-Wx-AWz"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.1932626856435643" green="0.1932626856435643" blue="0.1932626856435643" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="8pe-v0-8aK" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="BNf-Z2-PIa"/>
-                            <constraint firstItem="8pe-v0-8aK" firstAttribute="top" secondItem="3" secondAttribute="top" constant="70" id="gKR-Kn-Mfg"/>
+                            <constraint firstAttribute="bottom" secondItem="gjT-dW-OTh" secondAttribute="bottom" constant="163" id="Ucq-mg-GRu"/>
+                            <constraint firstItem="gjT-dW-OTh" firstAttribute="trailing" secondItem="H8f-uc-NTE" secondAttribute="trailing" type="default" id="Vlo-il-FMK"/>
+                            <constraint firstItem="gjT-dW-OTh" firstAttribute="leading" secondItem="H8f-uc-NTE" secondAttribute="leading" type="default" id="WME-OR-zzC"/>
+                            <constraint firstAttribute="bottom" secondItem="Cc9-OA-A7e" secondAttribute="bottom" constant="209" id="bx0-ju-oZQ"/>
+                            <constraint firstItem="H8f-uc-NTE" firstAttribute="top" secondItem="3" secondAttribute="top" constant="41" id="gN9-7T-JgX"/>
+                            <constraint firstItem="8pe-v0-8aK" firstAttribute="top" secondItem="H8f-uc-NTE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="l2f-Fx-jgo"/>
+                            <constraint firstItem="gjT-dW-OTh" firstAttribute="centerX" secondItem="Cc9-OA-A7e" secondAttribute="centerX" type="default" id="nIh-6o-u5N"/>
+                            <constraint firstItem="H8f-uc-NTE" firstAttribute="centerX" secondItem="8pe-v0-8aK" secondAttribute="centerX" type="default" id="p6p-AE-lFC"/>
+                            <constraint firstItem="gjT-dW-OTh" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="qOG-Wk-WPx"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -45,6 +74,18 @@
         <image name="BUTTON 1.png" width="150" height="150"/>
         <image name="BUTTON 2.png" width="150" height="150"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="talkBackViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/talkBackViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="level:"/>
+                <relationship kind="action" name="tbButton:"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

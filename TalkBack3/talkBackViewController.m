@@ -64,4 +64,10 @@
     }
     
 }
+
+- (IBAction)level:(id)sender {
+    UISlider *slider = (UISlider *)sender;
+    _playthrough.volume=slider.value;
+    
+    }
 @end
