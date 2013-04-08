@@ -186,8 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				D87A1CB217127336009A8A2D /* Images */,
-				D83866ED170F1DDD00491062 /* BUTTON 1.png */,
-				D83866EE170F1DDD00491062 /* BUTTON 2.png */,
 				D83866EF170F1DDD00491062 /* icon.png */,
 				D83866F0170F1DDD00491062 /* icon@2x.png */,
 				D83866A8170F162400491062 /* TalkBack3-Info.plist */,
@@ -244,6 +242,8 @@
 		D87A1CB217127336009A8A2D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D83866ED170F1DDD00491062 /* BUTTON 1.png */,
+				D83866EE170F1DDD00491062 /* BUTTON 2.png */,
 				D87A1CB317127336009A8A2D /* Knob Background.png */,
 				D87A1CB417127336009A8A2D /* Knob Background@2x.png */,
 				D87A1CB517127336009A8A2D /* Knob Disabled.png */,

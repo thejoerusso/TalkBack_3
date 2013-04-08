@@ -7,10 +7,12 @@
 //
 
 #import "talkBackViewController.h"
+#import "MHRotaryKnob.h"
 
 @interface talkBackViewController ()
 @property (nonatomic, strong) AEAudioController *audioController;
 @property (nonatomic, retain) AEPlaythroughChannel *playthrough;
+
 
 @end
 
@@ -19,7 +21,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    //----------------------------------------------
+    //KNOB SETUP
+    //----------------------------------------------
+    //TODO: Change images and figure out why it doesn't display background
+    
+    self.rotaryKnob.interactionStyle = MHRotaryKnobInteractionStyleSliderVertical;
+	self.rotaryKnob.scalingFactor = 1.5f;
+	self.rotaryKnob.maximumValue = 1;
+	self.rotaryKnob.minimumValue =0;
+	self.rotaryKnob.value = 0.75;
+	self.rotaryKnob.defaultValue = self.rotaryKnob.value;
+	self.rotaryKnob.resetsToDefault = YES;
+	self.rotaryKnob.backgroundColor = [UIColor clearColor];
+	self.rotaryKnob.backgroundImage = [UIImage imageNamed:@"Knob Background.png"];
+	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"Knob Disabled.png"] forState:UIControlStateNormal];
+	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"Knob Highlighted.png"] forState:UIControlStateHighlighted];
+	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"Knob Disabled.png"] forState:UIControlStateDisabled];
+	self.rotaryKnob.knobImageCenter = CGPointMake(80.0f, 76.0f);
+	[self.rotaryKnob addTarget:self action:@selector(rotaryKnobDidChange) forControlEvents:UIControlEventValueChanged];
+    
+        
+    //----------------------------------------------
+    //AUDIO SETUP
+    //----------------------------------------------
+    //TODO: Force audioController to use headphones output routing only
     
     self.audioController = [[AEAudioController alloc]
                             initWithAudioDescription:[AEAudioController nonInterleaved16BitStereoAudioDescription]
@@ -38,6 +65,7 @@
     
     //but keep it muted
     _playthrough.channelIsMuted=YES;
+    
 
 
 }
@@ -49,7 +77,7 @@
 }
 
 - (IBAction)tbButton:(id)sender {
-    
+    //TODO: Make this "momentoggle"
     UIButton *button = (UIButton *)sender;
     if (button.selected==NO) {
         button.selected=YES;
@@ -65,10 +93,12 @@
     
 }
 
-//- (IBAction)level:(id)sender {
-//    UISlider *slider = (UISlider *)sender;
-//    _playthrough.volume=slider.value;
-//    }
+- (IBAction)rotaryKnobDidChange
+{	
+	_playthrough.volume=self.rotaryKnob.value;
+}
+
+
 
 
 @end
