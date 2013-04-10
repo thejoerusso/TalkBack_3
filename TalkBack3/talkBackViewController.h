@@ -13,16 +13,14 @@
 #import "AEPlaythroughChannel.h"
 #import "TheAmazingAudioEngine.h"
 
-
 @interface talkBackViewController : UIViewController
 
 @property (nonatomic, weak) IBOutlet MHRotaryKnob *rotaryKnob;
 
 - (IBAction)tbButton:(id)sender;
-//- (IBAction)level:(id)sender;
 
 - (IBAction)rotaryKnobDidChange;
 
-
 @end
+
 

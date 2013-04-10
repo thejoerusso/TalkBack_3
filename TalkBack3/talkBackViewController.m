@@ -9,11 +9,11 @@
 #import "talkBackViewController.h"
 #import "MHRotaryKnob.h"
 
+static const int kOutputChanged;
+
 @interface talkBackViewController ()
 @property (nonatomic, strong) AEAudioController *audioController;
 @property (nonatomic, retain) AEPlaythroughChannel *playthrough;
-
-
 @end
 
 @implementation talkBackViewController
@@ -31,7 +31,7 @@
 	self.rotaryKnob.scalingFactor = 1.5f;
 	self.rotaryKnob.maximumValue = 1;
 	self.rotaryKnob.minimumValue =0;
-	self.rotaryKnob.value = 0.75;
+	self.rotaryKnob.value = 0;
 	self.rotaryKnob.defaultValue = self.rotaryKnob.value;
 	self.rotaryKnob.resetsToDefault = YES;
 	self.rotaryKnob.backgroundColor = [UIColor clearColor];
@@ -42,7 +42,6 @@
 	self.rotaryKnob.knobImageCenter = CGPointMake(80.0f, 76.0f);
 	[self.rotaryKnob addTarget:self action:@selector(rotaryKnobDidChange) forControlEvents:UIControlEventValueChanged];
     
-        
     //----------------------------------------------
     //AUDIO SETUP
     //----------------------------------------------
@@ -57,18 +56,17 @@
     if ( !result ) {
         // Report error
     }
-    
     //Turn playthrough on
     self.playthrough = [[AEPlaythroughChannel alloc] initWithAudioController:_audioController];
     [_audioController addInputReceiver:_playthrough];
     [_audioController addChannels:[NSArray arrayWithObject:_playthrough]];
     
     //but keep it muted
+    _playthrough.volume=0;
     _playthrough.channelIsMuted=YES;
-    
-
-
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -76,22 +74,32 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
 - (IBAction)tbButton:(id)sender {
     //TODO: Make this "momentoggle"
     UIButton *button = (UIButton *)sender;
+
+        //TODO: Workaround for touch down not setting "highlighted" button state. Is there a way around this?
+        [button setImage:[UIImage imageNamed:@"BUTTON 1.png"] forState:UIControlStateNormal];
+        
+    
     if (button.selected==NO) {
         button.selected=YES;
-        //unmute
         _playthrough.channelIsMuted=NO;
-
+        NSLog(@"ON");                
     }
     
     else{
         button.selected=NO;
         _playthrough.channelIsMuted=YES;
+         NSLog(@"OFF");
+        [button setImage:[UIImage imageNamed:@"BUTTON 2.png"] forState:UIControlStateNormal];
     }
     
 }
+
+
 
 - (IBAction)rotaryKnobDidChange
 {	
