@@ -23,4 +23,9 @@
 
 @end
 
+static const int kAudioRouteChanged;
+
+
+
+
 

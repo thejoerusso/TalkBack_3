@@ -18,6 +18,17 @@ static const int kOutputChanged;
 
 @implementation talkBackViewController
 
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ( context == &kAudioRouteChanged ) {
+        BOOL headphonesAreConnected = [_audioController.audioRoute isEqualToString:@"HeadphonesAndMicrophone"];
+        if(headphonesAreConnected == NO){
+            NSLog(@"no phones!!");
+            _playthrough.channelIsMuted=YES;
+            
+        }
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -25,8 +36,6 @@ static const int kOutputChanged;
     //----------------------------------------------
     //KNOB SETUP
     //----------------------------------------------
-    
-    
     self.rotaryKnob.interactionStyle = MHRotaryKnobInteractionStyleSliderVertical;
 	self.rotaryKnob.scalingFactor = 1.5f;
 	self.rotaryKnob.maximumValue = 1;
@@ -47,6 +56,7 @@ static const int kOutputChanged;
     //----------------------------------------------
     //TODO: Force audioController to use headphones output routing only
     
+    //observing playingThroughDeviceSpeaker, and setting channelIsMuted on the playthrough channel accordingly.
     self.audioController = [[AEAudioController alloc]
                             initWithAudioDescription:[AEAudioController nonInterleaved16BitStereoAudioDescription]
                             inputEnabled:YES];
@@ -64,17 +74,18 @@ static const int kOutputChanged;
     //but keep it muted
     _playthrough.volume=0;
     _playthrough.channelIsMuted=YES;
+    
+    //observe changes in audioRoute (ie:headphones pulled)
+    [_audioController addObserver:self forKeyPath:@"audioRoute" options:0 context:(void*)&kAudioRouteChanged];
+
+
 }
-
-
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 - (IBAction)tbButton:(id)sender {
     //TODO: Make this "momentoggle"
@@ -83,8 +94,7 @@ static const int kOutputChanged;
         //TODO: Workaround for touch down not setting "highlighted" button state. Is there a way around this?
         [button setImage:[UIImage imageNamed:@"BUTTON 1.png"] forState:UIControlStateNormal];
         
-    
-    if (button.selected==NO) {
+    if (button.selected==NO && [_audioController.audioRoute isEqualToString:@"HeadphonesAndMicrophone"]) {
         button.selected=YES;
         _playthrough.channelIsMuted=NO;
         NSLog(@"ON");                
@@ -98,8 +108,6 @@ static const int kOutputChanged;
     }
     
 }
-
-
 
 - (IBAction)rotaryKnobDidChange
 {	
