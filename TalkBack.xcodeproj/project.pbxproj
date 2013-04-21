@@ -30,12 +30,12 @@
 		D83866E9170F179300491062 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = D83866DE170F179300491062 /* README.markdown */; };
 		D83866EA170F179300491062 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = D83866DF170F179300491062 /* TPCircularBuffer+AudioBufferList.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D83866EB170F179300491062 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = D83866E1170F179300491062 /* TPCircularBuffer.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D83866F3170F1DDD00491062 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D83866EF170F1DDD00491062 /* icon.png */; };
-		D83866F4170F1DDD00491062 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D83866F0170F1DDD00491062 /* icon@2x.png */; };
 		D87A1CAF17127290009A8A2D /* MHRotaryKnob.m in Sources */ = {isa = PBXBuildFile; fileRef = D87A1CAE17127290009A8A2D /* MHRotaryKnob.m */; };
 		D87A1CB1171272EE009A8A2D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87A1CB0171272EE009A8A2D /* QuartzCore.framework */; };
 		D8CAF20A17166C04000DE595 /* knobBack.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CAF20917166C04000DE595 /* knobBack.png */; };
 		D8CAF20C17166C3D000DE595 /* knobIndex.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CAF20B17166C3D000DE595 /* knobIndex.png */; };
+		D8F422BD1724A85A0044772E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D8F422BC1724A85A0044772E /* icon.png */; };
+		D8F422BF1724A8750044772E /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8F422BE1724A8750044772E /* icon@2x.png */; };
 		D8FCF31E17150C9E005F9337 /* BUTTON 1.png in Resources */ = {isa = PBXBuildFile; fileRef = D8FCF31C17150C9E005F9337 /* BUTTON 1.png */; };
 		D8FCF31F17150C9E005F9337 /* BUTTON 2.png in Resources */ = {isa = PBXBuildFile; fileRef = D8FCF31D17150C9E005F9337 /* BUTTON 2.png */; };
 		D8FCF35617154F63005F9337 /* Screw.png in Resources */ = {isa = PBXBuildFile; fileRef = D8FCF35517154F63005F9337 /* Screw.png */; };
@@ -59,14 +59,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D838669D170F162400491062 /* TalkBack3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkBack3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D838669D170F162400491062 /* TalkBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D83866A0170F162400491062 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D83866A2170F162400491062 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D83866A4170F162400491062 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D83866A8170F162400491062 /* TalkBack3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TalkBack3-Info.plist"; sourceTree = "<group>"; };
+		D83866A8170F162400491062 /* TalkBack-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TalkBack-Info.plist"; sourceTree = "<group>"; };
 		D83866AA170F162400491062 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D83866AC170F162400491062 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D83866AE170F162400491062 /* TalkBack3-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TalkBack3-Prefix.pch"; sourceTree = "<group>"; };
+		D83866AE170F162400491062 /* TalkBack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TalkBack-Prefix.pch"; sourceTree = "<group>"; };
 		D83866AF170F162400491062 /* talkBackAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = talkBackAppDelegate.h; sourceTree = "<group>"; };
 		D83866B0170F162400491062 /* talkBackAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = talkBackAppDelegate.m; sourceTree = "<group>"; };
 		D83866B2170F162400491062 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -95,13 +95,13 @@
 		D83866E0170F179300491062 /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
 		D83866E1170F179300491062 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
 		D83866E2170F179300491062 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
-		D83866EF170F1DDD00491062 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = SOURCE_ROOT; };
-		D83866F0170F1DDD00491062 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = SOURCE_ROOT; };
 		D87A1CAD17127290009A8A2D /* MHRotaryKnob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHRotaryKnob.h; sourceTree = "<group>"; };
 		D87A1CAE17127290009A8A2D /* MHRotaryKnob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHRotaryKnob.m; sourceTree = "<group>"; };
 		D87A1CB0171272EE009A8A2D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D8CAF20917166C04000DE595 /* knobBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knobBack.png; sourceTree = "<group>"; };
 		D8CAF20B17166C3D000DE595 /* knobIndex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knobIndex.png; sourceTree = "<group>"; };
+		D8F422BC1724A85A0044772E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
+		D8F422BE1724A8750044772E /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
 		D8FCF31C17150C9E005F9337 /* BUTTON 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BUTTON 1.png"; path = "../BUTTON 1.png"; sourceTree = "<group>"; };
 		D8FCF31D17150C9E005F9337 /* BUTTON 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BUTTON 2.png"; path = "../BUTTON 2.png"; sourceTree = "<group>"; };
 		D8FCF35517154F63005F9337 /* Screw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screw.png; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				D83866C3170F16C800491062 /* TheAmazingAudioEngine.xcodeproj */,
-				D83866A6170F162400491062 /* TalkBack3 */,
+				D83866A6170F162400491062 /* TalkBack */,
 				D838669F170F162400491062 /* Frameworks */,
 				D838669E170F162400491062 /* Products */,
 			);
@@ -138,7 +138,7 @@
 		D838669E170F162400491062 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D838669D170F162400491062 /* TalkBack3.app */,
+				D838669D170F162400491062 /* TalkBack.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,7 +156,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D83866A6170F162400491062 /* TalkBack3 */ = {
+		D83866A6170F162400491062 /* TalkBack */ = {
 			isa = PBXGroup;
 			children = (
 				D83866D0170F179300491062 /* Modules */,
@@ -169,6 +169,7 @@
 				D83866BC170F162400491062 /* talkBackViewController.m */,
 				D83866A7170F162400491062 /* Supporting Files */,
 			);
+			name = TalkBack;
 			path = TalkBack3;
 			sourceTree = "<group>";
 		};
@@ -176,12 +177,10 @@
 			isa = PBXGroup;
 			children = (
 				D87A1CB217127336009A8A2D /* Images */,
-				D83866EF170F1DDD00491062 /* icon.png */,
-				D83866F0170F1DDD00491062 /* icon@2x.png */,
-				D83866A8170F162400491062 /* TalkBack3-Info.plist */,
+				D83866A8170F162400491062 /* TalkBack-Info.plist */,
 				D83866A9170F162400491062 /* InfoPlist.strings */,
 				D83866AC170F162400491062 /* main.m */,
-				D83866AE170F162400491062 /* TalkBack3-Prefix.pch */,
+				D83866AE170F162400491062 /* TalkBack-Prefix.pch */,
 				D83866B2170F162400491062 /* Default.png */,
 				D83866B4170F162400491062 /* Default@2x.png */,
 				D83866B6170F162400491062 /* Default-568h@2x.png */,
@@ -232,6 +231,8 @@
 		D87A1CB217127336009A8A2D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D8F422BE1724A8750044772E /* icon@2x.png */,
+				D8F422BC1724A85A0044772E /* icon.png */,
 				D8FCF35517154F63005F9337 /* Screw.png */,
 				D8CAF20B17166C3D000DE595 /* knobIndex.png */,
 				D8CAF20917166C04000DE595 /* knobBack.png */,
@@ -244,9 +245,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D838669C170F162400491062 /* TalkBack3 */ = {
+		D838669C170F162400491062 /* TalkBack */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D83866C0170F162400491062 /* Build configuration list for PBXNativeTarget "TalkBack3" */;
+			buildConfigurationList = D83866C0170F162400491062 /* Build configuration list for PBXNativeTarget "TalkBack" */;
 			buildPhases = (
 				D8386699170F162400491062 /* Sources */,
 				D838669A170F162400491062 /* Frameworks */,
@@ -257,9 +258,9 @@
 			dependencies = (
 				D83866CA170F16DD00491062 /* PBXTargetDependency */,
 			);
-			name = TalkBack3;
+			name = TalkBack;
 			productName = TalkBack3;
-			productReference = D838669D170F162400491062 /* TalkBack3.app */;
+			productReference = D838669D170F162400491062 /* TalkBack.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -272,7 +273,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Dangerous Music";
 			};
-			buildConfigurationList = D8386698170F162400491062 /* Build configuration list for PBXProject "TalkBack3" */;
+			buildConfigurationList = D8386698170F162400491062 /* Build configuration list for PBXProject "TalkBack" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -290,7 +291,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				D838669C170F162400491062 /* TalkBack3 */,
+				D838669C170F162400491062 /* TalkBack */,
 			);
 		};
 /* End PBXProject section */
@@ -316,13 +317,13 @@
 				D83866B7170F162400491062 /* Default-568h@2x.png in Resources */,
 				D83866BA170F162400491062 /* MainStoryboard.storyboard in Resources */,
 				D83866E9170F179300491062 /* README.markdown in Resources */,
-				D83866F3170F1DDD00491062 /* icon.png in Resources */,
-				D83866F4170F1DDD00491062 /* icon@2x.png in Resources */,
 				D8FCF31E17150C9E005F9337 /* BUTTON 1.png in Resources */,
 				D8FCF31F17150C9E005F9337 /* BUTTON 2.png in Resources */,
 				D8FCF35617154F63005F9337 /* Screw.png in Resources */,
 				D8CAF20A17166C04000DE595 /* knobBack.png in Resources */,
 				D8CAF20C17166C3D000DE595 /* knobIndex.png in Resources */,
+				D8F422BD1724A85A0044772E /* icon.png in Resources */,
+				D8F422BF1724A8750044772E /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,10 +439,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TalkBack3/TalkBack3-Prefix.pch";
+				GCC_PREFIX_HEADER = "TalkBack3/TalkBack-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = TheAmazingAudioEngine/TheAmazingAudioEngine;
-				INFOPLIST_FILE = "TalkBack3/TalkBack3-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "TalkBack3/TalkBack-Info.plist";
+				PRODUCT_NAME = TalkBack;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -452,10 +453,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Joseph Russo";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Joseph Russo";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TalkBack3/TalkBack3-Prefix.pch";
+				GCC_PREFIX_HEADER = "TalkBack3/TalkBack-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = TheAmazingAudioEngine/TheAmazingAudioEngine;
-				INFOPLIST_FILE = "TalkBack3/TalkBack3-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "TalkBack3/TalkBack-Info.plist";
+				PRODUCT_NAME = TalkBack;
 				PROVISIONING_PROFILE = "44879034-FD59-4EAB-98B5-8E2A4EE1E547";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "44879034-FD59-4EAB-98B5-8E2A4EE1E547";
 				WRAPPER_EXTENSION = app;
@@ -465,7 +466,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D8386698170F162400491062 /* Build configuration list for PBXProject "TalkBack3" */ = {
+		D8386698170F162400491062 /* Build configuration list for PBXProject "TalkBack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D83866BE170F162400491062 /* Debug */,
@@ -474,7 +475,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D83866C0170F162400491062 /* Build configuration list for PBXNativeTarget "TalkBack3" */ = {
+		D83866C0170F162400491062 /* Build configuration list for PBXNativeTarget "TalkBack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D83866C1170F162400491062 /* Debug */,

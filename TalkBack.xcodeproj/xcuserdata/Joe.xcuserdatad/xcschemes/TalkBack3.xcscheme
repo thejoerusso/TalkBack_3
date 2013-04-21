@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D838669C170F162400491062"
-               BuildableName = "TalkBack3.app"
-               BlueprintName = "TalkBack3"
-               ReferencedContainer = "container:TalkBack3.xcodeproj">
+               BuildableName = "TalkBack.app"
+               BlueprintName = "TalkBack"
+               ReferencedContainer = "container:TalkBack.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D838669C170F162400491062"
-            BuildableName = "TalkBack3.app"
-            BlueprintName = "TalkBack3"
-            ReferencedContainer = "container:TalkBack3.xcodeproj">
+            BuildableName = "TalkBack.app"
+            BlueprintName = "TalkBack"
+            ReferencedContainer = "container:TalkBack.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D838669C170F162400491062"
-            BuildableName = "TalkBack3.app"
-            BlueprintName = "TalkBack3"
-            ReferencedContainer = "container:TalkBack3.xcodeproj">
+            BuildableName = "TalkBack.app"
+            BlueprintName = "TalkBack"
+            ReferencedContainer = "container:TalkBack.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D838669C170F162400491062"
-            BuildableName = "TalkBack3.app"
-            BlueprintName = "TalkBack3"
-            ReferencedContainer = "container:TalkBack3.xcodeproj">
+            BuildableName = "TalkBack.app"
+            BlueprintName = "TalkBack"
+            ReferencedContainer = "container:TalkBack.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -56,9 +56,6 @@ static const int kOutputChanged;
     //----------------------------------------------
     //AUDIO SETUP
     //----------------------------------------------
-    //TODO: Force audioController to use headphones output routing only
-    
-    //observing playingThroughDeviceSpeaker, and setting channelIsMuted on the playthrough channel accordingly.
     self.audioController = [[AEAudioController alloc]
                             initWithAudioDescription:[AEAudioController nonInterleaved16BitStereoAudioDescription]
                             inputEnabled:YES];
@@ -79,8 +76,6 @@ static const int kOutputChanged;
     
     //observe changes in audioRoute (ie:headphones pulled)
     [_audioController addObserver:self forKeyPath:@"audioRoute" options:0 context:(void*)&kAudioRouteChanged];
-
-
 }
 
 - (void)didReceiveMemoryWarning
