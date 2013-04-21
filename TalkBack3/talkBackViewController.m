@@ -24,6 +24,8 @@ static const int kOutputChanged;
         if(headphonesAreConnected == NO){
             NSLog(@"no phones!!");
             _playthrough.channelIsMuted=YES;
+            _talkButton.selected=NO;
+            [_talkButton setImage:[UIImage imageNamed:@"BUTTON 2.png"] forState:UIControlStateNormal];
             
         }
     }

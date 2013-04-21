@@ -107,6 +107,7 @@
                     </view>
                     <connections>
                         <outlet property="rotaryKnob" destination="xA5-lb-UXZ" id="sg0-Zm-6wH"/>
+                        <outlet property="talkButton" destination="CWj-QD-F3Z" id="egH-NK-m0W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -132,6 +133,7 @@
                 <relationship kind="action" name="rotaryKnobDidChange"/>
                 <relationship kind="action" name="tbButton:"/>
                 <relationship kind="outlet" name="rotaryKnob" candidateClass="MHRotaryKnob"/>
+                <relationship kind="outlet" name="talkButton" candidateClass="UIButton"/>
             </relationships>
         </class>
     </classes>
