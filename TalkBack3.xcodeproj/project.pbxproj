@@ -449,11 +449,15 @@
 		D83866C2170F162400491062 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Joseph Russo";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Joseph Russo";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TalkBack3/TalkBack3-Prefix.pch";
-				"HEADER_SEARCH_PATHS[arch=*]" = TheAmazingAudioEngine;
+				"HEADER_SEARCH_PATHS[arch=*]" = TheAmazingAudioEngine/TheAmazingAudioEngine;
 				INFOPLIST_FILE = "TalkBack3/TalkBack3-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "44879034-FD59-4EAB-98B5-8E2A4EE1E547";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "44879034-FD59-4EAB-98B5-8E2A4EE1E547";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
