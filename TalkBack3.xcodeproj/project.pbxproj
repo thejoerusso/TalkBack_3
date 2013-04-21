@@ -34,16 +34,11 @@
 		D83866F4170F1DDD00491062 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D83866F0170F1DDD00491062 /* icon@2x.png */; };
 		D87A1CAF17127290009A8A2D /* MHRotaryKnob.m in Sources */ = {isa = PBXBuildFile; fileRef = D87A1CAE17127290009A8A2D /* MHRotaryKnob.m */; };
 		D87A1CB1171272EE009A8A2D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87A1CB0171272EE009A8A2D /* QuartzCore.framework */; };
-		D87A1CBB17127336009A8A2D /* Knob Background.png in Resources */ = {isa = PBXBuildFile; fileRef = D87A1CB317127336009A8A2D /* Knob Background.png */; };
-		D87A1CBC17127336009A8A2D /* Knob Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D87A1CB417127336009A8A2D /* Knob Background@2x.png */; };
-		D87A1CBD17127336009A8A2D /* Knob Disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = D87A1CB517127336009A8A2D /* Knob Disabled.png */; };
-		D87A1CBE17127336009A8A2D /* Knob Disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D87A1CB617127336009A8A2D /* Knob Disabled@2x.png */; };
-		D87A1CBF17127336009A8A2D /* Knob Highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = D87A1CB717127336009A8A2D /* Knob Highlighted.png */; };
-		D87A1CC017127336009A8A2D /* Knob Highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D87A1CB817127336009A8A2D /* Knob Highlighted@2x.png */; };
-		D87A1CC117127336009A8A2D /* Knob.png in Resources */ = {isa = PBXBuildFile; fileRef = D87A1CB917127336009A8A2D /* Knob.png */; };
-		D87A1CC217127336009A8A2D /* Knob@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D87A1CBA17127336009A8A2D /* Knob@2x.png */; };
+		D8CAF20A17166C04000DE595 /* knobBack.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CAF20917166C04000DE595 /* knobBack.png */; };
+		D8CAF20C17166C3D000DE595 /* knobIndex.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CAF20B17166C3D000DE595 /* knobIndex.png */; };
 		D8FCF31E17150C9E005F9337 /* BUTTON 1.png in Resources */ = {isa = PBXBuildFile; fileRef = D8FCF31C17150C9E005F9337 /* BUTTON 1.png */; };
 		D8FCF31F17150C9E005F9337 /* BUTTON 2.png in Resources */ = {isa = PBXBuildFile; fileRef = D8FCF31D17150C9E005F9337 /* BUTTON 2.png */; };
+		D8FCF35617154F63005F9337 /* Screw.png in Resources */ = {isa = PBXBuildFile; fileRef = D8FCF35517154F63005F9337 /* Screw.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,16 +100,11 @@
 		D87A1CAD17127290009A8A2D /* MHRotaryKnob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHRotaryKnob.h; sourceTree = "<group>"; };
 		D87A1CAE17127290009A8A2D /* MHRotaryKnob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHRotaryKnob.m; sourceTree = "<group>"; };
 		D87A1CB0171272EE009A8A2D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		D87A1CB317127336009A8A2D /* Knob Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Knob Background.png"; sourceTree = "<group>"; };
-		D87A1CB417127336009A8A2D /* Knob Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Knob Background@2x.png"; sourceTree = "<group>"; };
-		D87A1CB517127336009A8A2D /* Knob Disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Knob Disabled.png"; sourceTree = "<group>"; };
-		D87A1CB617127336009A8A2D /* Knob Disabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Knob Disabled@2x.png"; sourceTree = "<group>"; };
-		D87A1CB717127336009A8A2D /* Knob Highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Knob Highlighted.png"; sourceTree = "<group>"; };
-		D87A1CB817127336009A8A2D /* Knob Highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Knob Highlighted@2x.png"; sourceTree = "<group>"; };
-		D87A1CB917127336009A8A2D /* Knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Knob.png; sourceTree = "<group>"; };
-		D87A1CBA17127336009A8A2D /* Knob@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Knob@2x.png"; sourceTree = "<group>"; };
-		D8FCF31C17150C9E005F9337 /* BUTTON 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BUTTON 1.png"; sourceTree = "<group>"; };
-		D8FCF31D17150C9E005F9337 /* BUTTON 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BUTTON 2.png"; sourceTree = "<group>"; };
+		D8CAF20917166C04000DE595 /* knobBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knobBack.png; sourceTree = "<group>"; };
+		D8CAF20B17166C3D000DE595 /* knobIndex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knobIndex.png; sourceTree = "<group>"; };
+		D8FCF31C17150C9E005F9337 /* BUTTON 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BUTTON 1.png"; path = "../BUTTON 1.png"; sourceTree = "<group>"; };
+		D8FCF31D17150C9E005F9337 /* BUTTON 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BUTTON 2.png"; path = "../BUTTON 2.png"; sourceTree = "<group>"; };
+		D8FCF35517154F63005F9337 /* Screw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screw.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,8 +165,6 @@
 				D83866AF170F162400491062 /* talkBackAppDelegate.h */,
 				D83866B0170F162400491062 /* talkBackAppDelegate.m */,
 				D83866B8170F162400491062 /* MainStoryboard.storyboard */,
-				D8FCF31C17150C9E005F9337 /* BUTTON 1.png */,
-				D8FCF31D17150C9E005F9337 /* BUTTON 2.png */,
 				D83866BB170F162400491062 /* talkBackViewController.h */,
 				D83866BC170F162400491062 /* talkBackViewController.m */,
 				D83866A7170F162400491062 /* Supporting Files */,
@@ -244,14 +232,11 @@
 		D87A1CB217127336009A8A2D /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				D87A1CB317127336009A8A2D /* Knob Background.png */,
-				D87A1CB417127336009A8A2D /* Knob Background@2x.png */,
-				D87A1CB517127336009A8A2D /* Knob Disabled.png */,
-				D87A1CB617127336009A8A2D /* Knob Disabled@2x.png */,
-				D87A1CB717127336009A8A2D /* Knob Highlighted.png */,
-				D87A1CB817127336009A8A2D /* Knob Highlighted@2x.png */,
-				D87A1CB917127336009A8A2D /* Knob.png */,
-				D87A1CBA17127336009A8A2D /* Knob@2x.png */,
+				D8FCF35517154F63005F9337 /* Screw.png */,
+				D8CAF20B17166C3D000DE595 /* knobIndex.png */,
+				D8CAF20917166C04000DE595 /* knobBack.png */,
+				D8FCF31C17150C9E005F9337 /* BUTTON 1.png */,
+				D8FCF31D17150C9E005F9337 /* BUTTON 2.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -333,16 +318,11 @@
 				D83866E9170F179300491062 /* README.markdown in Resources */,
 				D83866F3170F1DDD00491062 /* icon.png in Resources */,
 				D83866F4170F1DDD00491062 /* icon@2x.png in Resources */,
-				D87A1CBB17127336009A8A2D /* Knob Background.png in Resources */,
-				D87A1CBC17127336009A8A2D /* Knob Background@2x.png in Resources */,
-				D87A1CBD17127336009A8A2D /* Knob Disabled.png in Resources */,
-				D87A1CBE17127336009A8A2D /* Knob Disabled@2x.png in Resources */,
-				D87A1CBF17127336009A8A2D /* Knob Highlighted.png in Resources */,
-				D87A1CC017127336009A8A2D /* Knob Highlighted@2x.png in Resources */,
-				D87A1CC117127336009A8A2D /* Knob.png in Resources */,
-				D87A1CC217127336009A8A2D /* Knob@2x.png in Resources */,
 				D8FCF31E17150C9E005F9337 /* BUTTON 1.png in Resources */,
 				D8FCF31F17150C9E005F9337 /* BUTTON 2.png in Resources */,
+				D8FCF35617154F63005F9337 /* Screw.png in Resources */,
+				D8CAF20A17166C04000DE595 /* knobBack.png in Resources */,
+				D8CAF20C17166C3D000DE595 /* knobIndex.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
