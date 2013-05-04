@@ -97,6 +97,15 @@ static const int kOutputChanged;
         NSLog(@"ON");                
     }
     
+    else if (button.selected==NO && [_audioController.audioRoute isEqualToString:@"SpeakerAndMicrophone"]) {
+        button.selected=NO;
+        _playthrough.channelIsMuted=YES;
+        [button setImage:[UIImage imageNamed:@"BUTTON 2.png"] forState:UIControlStateNormal];
+         NSLog(@"CONNECT SOMETHING!");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connect Something..." message:@"You must plug in to the headphone jack before enabling talkback." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+    
     else{
         button.selected=NO;
         _playthrough.channelIsMuted=YES;
@@ -111,6 +120,11 @@ static const int kOutputChanged;
 	_playthrough.volume=self.rotaryKnob.value;
 }
 
+- (void)dealloc
+{
+    //TODO: Stop Audio Engine
+    //TODO: Remove Observers
+}
 
 
 

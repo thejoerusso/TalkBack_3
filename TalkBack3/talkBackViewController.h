@@ -13,7 +13,7 @@
 #import "AEPlaythroughChannel.h"
 #import "TheAmazingAudioEngine.h"
 
-@interface talkBackViewController : UIViewController
+@interface talkBackViewController : UIViewController <UIAlertViewDelegate>
 
 @property (nonatomic, weak) IBOutlet MHRotaryKnob *rotaryKnob;
 @property (nonatomic, weak) IBOutlet UIButton *talkButton;
