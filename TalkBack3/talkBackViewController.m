@@ -18,6 +18,9 @@ static const int kOutputChanged;
 
 @implementation talkBackViewController
 
+//----------------------------------------------
+//OBSERVER FOR HEADPHONES PULLED
+//----------------------------------------------
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ( context == &kAudioRouteChanged ) {
         BOOL headphonesAreConnected = [_audioController.audioRoute isEqualToString:@"HeadphonesAndMicrophone"];
@@ -78,25 +81,35 @@ static const int kOutputChanged;
     [_audioController addObserver:self forKeyPath:@"audioRoute" options:0 context:(void*)&kAudioRouteChanged];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)tbButton:(id)sender {
     //TODO: Make this "momentoggle"
     UIButton *button = (UIButton *)sender;
 
         //TODO: Workaround for touch down not setting "highlighted" button state. Is there a way around this?
         [button setImage:[UIImage imageNamed:@"BUTTON 1.png"] forState:UIControlStateNormal];
-        
+    
+    //Turn TalkBack ON
     if (button.selected==NO && [_audioController.audioRoute isEqualToString:@"HeadphonesAndMicrophone"]) {
         button.selected=YES;
         _playthrough.channelIsMuted=NO;
-        NSLog(@"ON");                
+        NSLog(@"ON");
     }
     
+     //Talkback pressed with no phones connected
+    else if (button.selected==NO && ![_audioController.audioRoute isEqualToString:@"HeadphonesAndMicrophone"]) {
+        button.selected=NO;
+        _playthrough.channelIsMuted=YES;
+        NSLog(@"Button pressed but no phones");
+        [button setImage:[UIImage imageNamed:@"BUTTON 2.png"] forState:UIControlStateNormal];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connect something."
+                                                        message:@"You must have something connected to the headphone jack for talkback."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    
+    //Turn talkback off
     else{
         button.selected=NO;
         _playthrough.channelIsMuted=YES;
@@ -111,7 +124,16 @@ static const int kOutputChanged;
 	_playthrough.volume=self.rotaryKnob.value;
 }
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
-
+- (void)dealloc
+{
+    //REMOVE HEADPHONE OBSERVER
+    [_audioController removeObserver:self forKeyPath:@"audioRoute"];
+}
 
 @end

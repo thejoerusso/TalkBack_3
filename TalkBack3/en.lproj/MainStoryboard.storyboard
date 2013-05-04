@@ -120,23 +120,6 @@
         <image name="Screw.png" width="50" height="52"/>
         <image name="knobBack.png" width="150" height="150"/>
     </resources>
-    <classes>
-        <class className="MHRotaryKnob" superclassName="UIControl">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MHRotaryKnob.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="talkBackViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/talkBackViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="rotaryKnobDidChange"/>
-                <relationship kind="action" name="tbButton:"/>
-                <relationship kind="outlet" name="rotaryKnob" candidateClass="MHRotaryKnob"/>
-                <relationship kind="outlet" name="talkButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
