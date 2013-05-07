@@ -18,16 +18,35 @@ static const int kOutputChanged;
 
 @implementation talkBackViewController
 
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+
+-(void)observeValueForKeyPath:(NSString *)keyPath
+                     ofObject:(id)object
+                       change:(NSDictionary *)change
+                      context:(void *)context {
     if ( context == &kAudioRouteChanged ) {
         BOOL headphonesAreConnected = [_audioController.audioRoute isEqualToString:@"HeadphonesAndMicrophone"];
+        //Cut talkback if phones are pulled.
         if(headphonesAreConnected == NO){
             NSLog(@"no phones!!");
             _playthrough.channelIsMuted=YES;
             _talkButton.selected=NO;
             [_talkButton setImage:[UIImage imageNamed:@"BUTTON 2.png"] forState:UIControlStateNormal];
-            
         }
+    }
+}
+
+//If talkback is not on, stop the audio engine so it does not continue in the background.
+-(void)handleEnteredBackground{
+    if (_talkButton.selected==NO) {
+        //kill audio
+        [_audioController stop];
+    }
+}
+
+-(void)handleEnterForeground{
+    //start audio engine if not already running
+    if (_audioController.running==NO) {
+        [_audioController start:NULL];
     }
 }
 
@@ -76,6 +95,18 @@ static const int kOutputChanged;
     
     //observe changes in audioRoute (ie:headphones pulled)
     [_audioController addObserver:self forKeyPath:@"audioRoute" options:0 context:(void*)&kAudioRouteChanged];
+    
+    //observe for entering background
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(handleEnteredBackground)
+                                                 name: UIApplicationDidEnterBackgroundNotification
+                                               object: nil];
+    
+    //observe for entering foreground
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(handleEnterForeground)
+                                                 name: UIApplicationWillEnterForegroundNotification
+                                               object: nil];
 }
 
 - (void)didReceiveMemoryWarning
