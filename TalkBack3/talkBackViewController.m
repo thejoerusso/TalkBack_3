@@ -65,11 +65,10 @@ static const int kOutputChanged;
 	self.rotaryKnob.defaultValue = self.rotaryKnob.value;
 	self.rotaryKnob.resetsToDefault = YES;
 	self.rotaryKnob.backgroundColor = [UIColor clearColor];
-	self.rotaryKnob.backgroundImage = [UIImage imageNamed:@"knobBack.png"];//TODO: Doesn't Work
 	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"knobIndex.png"] forState:UIControlStateNormal];
 	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"knobIndex.png"] forState:UIControlStateHighlighted];
 	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"knobIndex.png"] forState:UIControlStateDisabled];
-	self.rotaryKnob.knobImageCenter = CGPointMake(80.0f, 76.0f);
+	self.rotaryKnob.knobImageCenter = CGPointMake(80.0f, 80.0f);
 	[self.rotaryKnob addTarget:self action:@selector(rotaryKnobDidChange) forControlEvents:UIControlEventValueChanged];
     
     //----------------------------------------------
