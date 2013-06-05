@@ -152,6 +152,19 @@ static const int kOutputChanged;
 
 - (void)dealloc
 {
+        [_audioController removeObserver:self forKeyPath:@"audioRoute"];
+         //TODO: Remove Other Observers??
+    
+    
+        if ( _playthrough ) {
+            [_audioController removeInputReceiver:_playthrough];
+            self.playthrough = nil;
+           
+        }
+    
+        self.audioController = nil;
+
+
     //TODO: Stop Audio Engine
     //TODO: Remove Observers
 }
