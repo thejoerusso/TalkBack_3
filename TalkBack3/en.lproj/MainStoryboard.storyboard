@@ -22,18 +22,18 @@
                                     </imageView>
                                     <imageView opaque="NO" autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="Reflections.png" translatesAutoresizingMaskIntoConstraints="NO" id="3u1-ee-mUw">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="e6N-Fa-rr0"/>
-                                            <constraint firstAttribute="width" constant="150" id="gb6-Xh-Cq3"/>
+                                            <constraint firstAttribute="width" constant="148" id="9QM-yO-qlQ"/>
+                                            <constraint firstAttribute="height" constant="148" id="R0c-R7-8xW"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="3u1-ee-mUw" firstAttribute="centerX" secondItem="cdh-W5-8cB" secondAttribute="centerX" type="default" id="AUK-rh-LZm"/>
                                     <constraint firstItem="cdh-W5-8cB" firstAttribute="top" secondItem="xA5-lb-UXZ" secondAttribute="top" type="default" id="FmL-0q-9mC"/>
                                     <constraint firstAttribute="height" constant="160" type="user" id="Xla-Hm-73Q"/>
-                                    <constraint firstItem="3u1-ee-mUw" firstAttribute="centerY" secondItem="cdh-W5-8cB" secondAttribute="centerY" type="default" id="icA-rJ-EfA"/>
+                                    <constraint firstItem="3u1-ee-mUw" firstAttribute="centerY" secondItem="cdh-W5-8cB" secondAttribute="centerY" type="default" id="cim-EO-NhL"/>
                                     <constraint firstItem="cdh-W5-8cB" firstAttribute="leading" secondItem="xA5-lb-UXZ" secondAttribute="leading" type="default" id="nul-VX-9sk"/>
+                                    <constraint firstItem="3u1-ee-mUw" firstAttribute="centerX" secondItem="cdh-W5-8cB" secondAttribute="centerX" type="default" id="qWN-EE-YJT"/>
                                     <constraint firstItem="cdh-W5-8cB" firstAttribute="trailing" secondItem="xA5-lb-UXZ" secondAttribute="trailing" type="default" id="v94-sK-bPM"/>
                                 </constraints>
                             </view>
