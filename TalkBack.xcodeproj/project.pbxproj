@@ -32,12 +32,16 @@
 		D83866EB170F179300491062 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = D83866E1170F179300491062 /* TPCircularBuffer.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D87A1CAF17127290009A8A2D /* MHRotaryKnob.m in Sources */ = {isa = PBXBuildFile; fileRef = D87A1CAE17127290009A8A2D /* MHRotaryKnob.m */; };
 		D87A1CB1171272EE009A8A2D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87A1CB0171272EE009A8A2D /* QuartzCore.framework */; };
+		D88CFAC21760BD26000CC974 /* Btn.png in Resources */ = {isa = PBXBuildFile; fileRef = D88CFAC11760BD26000CC974 /* Btn.png */; };
+		D88CFAC81760BD3B000CC974 /* Background-01.png in Resources */ = {isa = PBXBuildFile; fileRef = D88CFAC31760BD3B000CC974 /* Background-01.png */; };
+		D88CFAC91760BD3B000CC974 /* Btn_engaged.png in Resources */ = {isa = PBXBuildFile; fileRef = D88CFAC41760BD3B000CC974 /* Btn_engaged.png */; };
+		D88CFACA1760BD3B000CC974 /* KnobFixins.png in Resources */ = {isa = PBXBuildFile; fileRef = D88CFAC51760BD3B000CC974 /* KnobFixins.png */; };
+		D88CFACB1760BD3B000CC974 /* Pointer.png in Resources */ = {isa = PBXBuildFile; fileRef = D88CFAC61760BD3B000CC974 /* Pointer.png */; };
+		D88CFACC1760BD3B000CC974 /* Reflections.png in Resources */ = {isa = PBXBuildFile; fileRef = D88CFAC71760BD3B000CC974 /* Reflections.png */; };
 		D8CAF20A17166C04000DE595 /* knobBack.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CAF20917166C04000DE595 /* knobBack.png */; };
 		D8CAF20C17166C3D000DE595 /* knobIndex.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CAF20B17166C3D000DE595 /* knobIndex.png */; };
 		D8F422BD1724A85A0044772E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D8F422BC1724A85A0044772E /* icon.png */; };
 		D8F422BF1724A8750044772E /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8F422BE1724A8750044772E /* icon@2x.png */; };
-		D8FCF31E17150C9E005F9337 /* BUTTON 1.png in Resources */ = {isa = PBXBuildFile; fileRef = D8FCF31C17150C9E005F9337 /* BUTTON 1.png */; };
-		D8FCF31F17150C9E005F9337 /* BUTTON 2.png in Resources */ = {isa = PBXBuildFile; fileRef = D8FCF31D17150C9E005F9337 /* BUTTON 2.png */; };
 		D8FCF35617154F63005F9337 /* Screw.png in Resources */ = {isa = PBXBuildFile; fileRef = D8FCF35517154F63005F9337 /* Screw.png */; };
 /* End PBXBuildFile section */
 
@@ -98,12 +102,16 @@
 		D87A1CAD17127290009A8A2D /* MHRotaryKnob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHRotaryKnob.h; sourceTree = "<group>"; };
 		D87A1CAE17127290009A8A2D /* MHRotaryKnob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHRotaryKnob.m; sourceTree = "<group>"; };
 		D87A1CB0171272EE009A8A2D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D88CFAC11760BD26000CC974 /* Btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Btn.png; sourceTree = "<group>"; };
+		D88CFAC31760BD3B000CC974 /* Background-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background-01.png"; sourceTree = "<group>"; };
+		D88CFAC41760BD3B000CC974 /* Btn_engaged.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Btn_engaged.png; sourceTree = "<group>"; };
+		D88CFAC51760BD3B000CC974 /* KnobFixins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KnobFixins.png; sourceTree = "<group>"; };
+		D88CFAC61760BD3B000CC974 /* Pointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pointer.png; sourceTree = "<group>"; };
+		D88CFAC71760BD3B000CC974 /* Reflections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Reflections.png; sourceTree = "<group>"; };
 		D8CAF20917166C04000DE595 /* knobBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knobBack.png; sourceTree = "<group>"; };
 		D8CAF20B17166C3D000DE595 /* knobIndex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knobIndex.png; sourceTree = "<group>"; };
 		D8F422BC1724A85A0044772E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
 		D8F422BE1724A8750044772E /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
-		D8FCF31C17150C9E005F9337 /* BUTTON 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BUTTON 1.png"; path = "../BUTTON 1.png"; sourceTree = "<group>"; };
-		D8FCF31D17150C9E005F9337 /* BUTTON 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BUTTON 2.png"; path = "../BUTTON 2.png"; sourceTree = "<group>"; };
 		D8FCF35517154F63005F9337 /* Screw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screw.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -231,13 +239,17 @@
 		D87A1CB217127336009A8A2D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D88CFAC31760BD3B000CC974 /* Background-01.png */,
+				D88CFAC41760BD3B000CC974 /* Btn_engaged.png */,
+				D88CFAC51760BD3B000CC974 /* KnobFixins.png */,
+				D88CFAC61760BD3B000CC974 /* Pointer.png */,
+				D88CFAC71760BD3B000CC974 /* Reflections.png */,
+				D88CFAC11760BD26000CC974 /* Btn.png */,
 				D8F422BE1724A8750044772E /* icon@2x.png */,
 				D8F422BC1724A85A0044772E /* icon.png */,
 				D8FCF35517154F63005F9337 /* Screw.png */,
 				D8CAF20B17166C3D000DE595 /* knobIndex.png */,
 				D8CAF20917166C04000DE595 /* knobBack.png */,
-				D8FCF31C17150C9E005F9337 /* BUTTON 1.png */,
-				D8FCF31D17150C9E005F9337 /* BUTTON 2.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -317,13 +329,17 @@
 				D83866B7170F162400491062 /* Default-568h@2x.png in Resources */,
 				D83866BA170F162400491062 /* MainStoryboard.storyboard in Resources */,
 				D83866E9170F179300491062 /* README.markdown in Resources */,
-				D8FCF31E17150C9E005F9337 /* BUTTON 1.png in Resources */,
-				D8FCF31F17150C9E005F9337 /* BUTTON 2.png in Resources */,
 				D8FCF35617154F63005F9337 /* Screw.png in Resources */,
 				D8CAF20A17166C04000DE595 /* knobBack.png in Resources */,
 				D8CAF20C17166C3D000DE595 /* knobIndex.png in Resources */,
 				D8F422BD1724A85A0044772E /* icon.png in Resources */,
 				D8F422BF1724A8750044772E /* icon@2x.png in Resources */,
+				D88CFAC21760BD26000CC974 /* Btn.png in Resources */,
+				D88CFAC81760BD3B000CC974 /* Background-01.png in Resources */,
+				D88CFAC91760BD3B000CC974 /* Btn_engaged.png in Resources */,
+				D88CFACA1760BD3B000CC974 /* KnobFixins.png in Resources */,
+				D88CFACB1760BD3B000CC974 /* Pointer.png in Resources */,
+				D88CFACC1760BD3B000CC974 /* Reflections.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,7 +30,7 @@ static const int kOutputChanged;
             NSLog(@"no phones!!");
             _playthrough.channelIsMuted=YES;
             _talkButton.selected=NO;
-            [_talkButton setImage:[UIImage imageNamed:@"BUTTON 2.png"] forState:UIControlStateNormal];
+            [_talkButton setImage:[UIImage imageNamed:@"Btn.png"] forState:UIControlStateNormal];
         }
     }
 }
@@ -65,9 +65,9 @@ static const int kOutputChanged;
 	self.rotaryKnob.defaultValue = self.rotaryKnob.value;
 	self.rotaryKnob.resetsToDefault = YES;
 	self.rotaryKnob.backgroundColor = [UIColor clearColor];
-	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"knobIndex.png"] forState:UIControlStateNormal];
-	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"knobIndex.png"] forState:UIControlStateHighlighted];
-	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"knobIndex.png"] forState:UIControlStateDisabled];
+	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"Pointer.png"] forState:UIControlStateNormal];
+	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"Pointer.png"] forState:UIControlStateHighlighted];
+	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"Pointer.png"] forState:UIControlStateDisabled];
 	self.rotaryKnob.knobImageCenter = CGPointMake(80.0f, 80.0f);
 	[self.rotaryKnob addTarget:self action:@selector(rotaryKnobDidChange) forControlEvents:UIControlEventValueChanged];
     
@@ -119,7 +119,7 @@ static const int kOutputChanged;
     UIButton *button = (UIButton *)sender;
 
         //TODO: Workaround for touch down not setting "highlighted" button state. Is there a way around this?
-        [button setImage:[UIImage imageNamed:@"BUTTON 1.png"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"Btn_engaged.png"] forState:UIControlStateNormal];
         
     if (button.selected==NO && [_audioController.audioRoute isEqualToString:@"HeadphonesAndMicrophone"]) {
         button.selected=YES;
@@ -130,7 +130,7 @@ static const int kOutputChanged;
     else if (button.selected==NO && [_audioController.audioRoute isEqualToString:@"SpeakerAndMicrophone"]) {
         button.selected=NO;
         _playthrough.channelIsMuted=YES;
-        [button setImage:[UIImage imageNamed:@"BUTTON 2.png"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"Btn.png"] forState:UIControlStateNormal];
          NSLog(@"CONNECT SOMETHING!");
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connect Something..." message:@"You must plug in to the headphone jack before enabling talkback." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
@@ -140,7 +140,7 @@ static const int kOutputChanged;
         button.selected=NO;
         _playthrough.channelIsMuted=YES;
          NSLog(@"OFF");
-        [button setImage:[UIImage imageNamed:@"BUTTON 2.png"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"Btn.png"] forState:UIControlStateNormal];
     }
     
 }
@@ -152,23 +152,16 @@ static const int kOutputChanged;
 
 - (void)dealloc
 {
+        //TODO: Move these??
         [_audioController removeObserver:self forKeyPath:@"audioRoute"];
-         //TODO: Remove Other Observers??
-    
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
     
         if ( _playthrough ) {
             [_audioController removeInputReceiver:_playthrough];
             self.playthrough = nil;
-           
         }
-    
         self.audioController = nil;
-
-
-    //TODO: Stop Audio Engine
-    //TODO: Remove Observers
+    
 }
-
-
 
 @end
