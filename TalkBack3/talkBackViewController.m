@@ -27,10 +27,10 @@ static const int kOutputChanged;
         BOOL headphonesAreConnected = [_audioController.audioRoute isEqualToString:@"HeadphonesAndMicrophone"];
         //Cut talkback if phones are pulled.
         if(headphonesAreConnected == NO){
-            NSLog(@"no phones!!");
+            //NSLog(@"no phones!!");
             _playthrough.channelIsMuted=YES;
             _talkButton.selected=NO;
-            [_talkButton setImage:[UIImage imageNamed:@"Btn.png"] forState:UIControlStateNormal];
+            [_talkButton setImage:[UIImage imageNamed:@"Btn2.png"] forState:UIControlStateNormal];
         }
     }
 }
@@ -121,7 +121,7 @@ static const int kOutputChanged;
     UIButton *button = (UIButton *)sender;
 
         //TODO: Workaround for touch down not setting "highlighted" button state. Is there a way around this?
-        [button setImage:[UIImage imageNamed:@"Btn_engaged.png"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"BtnDownLight2.png"] forState:UIControlStateNormal];
         
     if (button.selected==NO && [_audioController.audioRoute isEqualToString:@"HeadphonesAndMicrophone"]) {
         button.selected=YES;
@@ -132,9 +132,9 @@ static const int kOutputChanged;
     else if (button.selected==NO && [_audioController.audioRoute isEqualToString:@"SpeakerAndMicrophone"]) {
         button.selected=NO;
         _playthrough.channelIsMuted=YES;
-        [button setImage:[UIImage imageNamed:@"Btn.png"] forState:UIControlStateNormal];
-         NSLog(@"CONNECT SOMETHING!");
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connect Something..." message:@"You must plug in to the headphone jack before enabling talkback." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [button setImage:[UIImage imageNamed:@"Btn2.png"] forState:UIControlStateNormal];
+        //NSLog(@"CONNECT SOMETHING!");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"This may cause feedback." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
         [alert show];
     }
     
@@ -142,7 +142,7 @@ static const int kOutputChanged;
         button.selected=NO;
         _playthrough.channelIsMuted=YES;
          NSLog(@"OFF");
-        [button setImage:[UIImage imageNamed:@"Btn.png"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"Btn2.png"] forState:UIControlStateNormal];
     }
     
 }
@@ -164,6 +164,16 @@ static const int kOutputChanged;
         }
         self.audioController = nil;
     
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+    //speakers are on user wants to turn talkbakc on anyway
+    _talkButton.selected=YES;
+    _playthrough.channelIsMuted=NO;
+    NSLog(@"ON");
+    }
 }
 
 @end

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D809E70D176279C100131AFD /* Background2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = D809E705176279C100131AFD /* Background2-01.png */; };
+		D809E70E176279C100131AFD /* Btn2.png in Resources */ = {isa = PBXBuildFile; fileRef = D809E706176279C100131AFD /* Btn2.png */; };
+		D809E70F176279C100131AFD /* BtnDown2.png in Resources */ = {isa = PBXBuildFile; fileRef = D809E707176279C100131AFD /* BtnDown2.png */; };
+		D809E710176279C100131AFD /* BtnDownLight2.png in Resources */ = {isa = PBXBuildFile; fileRef = D809E708176279C100131AFD /* BtnDownLight2.png */; };
+		D809E711176279C100131AFD /* Knob2.png in Resources */ = {isa = PBXBuildFile; fileRef = D809E709176279C100131AFD /* Knob2.png */; };
+		D809E712176279C100131AFD /* Level2.png in Resources */ = {isa = PBXBuildFile; fileRef = D809E70A176279C100131AFD /* Level2.png */; };
+		D809E713176279C100131AFD /* Pointer2.png in Resources */ = {isa = PBXBuildFile; fileRef = D809E70B176279C100131AFD /* Pointer2.png */; };
+		D809E714176279C100131AFD /* Reflection2.png in Resources */ = {isa = PBXBuildFile; fileRef = D809E70C176279C100131AFD /* Reflection2.png */; };
 		D83866A1170F162400491062 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83866A0170F162400491062 /* UIKit.framework */; };
 		D83866A3170F162400491062 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83866A2170F162400491062 /* Foundation.framework */; };
 		D83866A5170F162400491062 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83866A4170F162400491062 /* CoreGraphics.framework */; };
@@ -60,6 +68,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D809E705176279C100131AFD /* Background2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background2-01.png"; sourceTree = "<group>"; };
+		D809E706176279C100131AFD /* Btn2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Btn2.png; sourceTree = "<group>"; };
+		D809E707176279C100131AFD /* BtnDown2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BtnDown2.png; sourceTree = "<group>"; };
+		D809E708176279C100131AFD /* BtnDownLight2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BtnDownLight2.png; sourceTree = "<group>"; };
+		D809E709176279C100131AFD /* Knob2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Knob2.png; sourceTree = "<group>"; };
+		D809E70A176279C100131AFD /* Level2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Level2.png; sourceTree = "<group>"; };
+		D809E70B176279C100131AFD /* Pointer2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pointer2.png; sourceTree = "<group>"; };
+		D809E70C176279C100131AFD /* Reflection2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Reflection2.png; sourceTree = "<group>"; };
 		D838669D170F162400491062 /* TalkBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D83866A0170F162400491062 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D83866A2170F162400491062 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -233,6 +249,14 @@
 		D87A1CB217127336009A8A2D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D809E705176279C100131AFD /* Background2-01.png */,
+				D809E706176279C100131AFD /* Btn2.png */,
+				D809E707176279C100131AFD /* BtnDown2.png */,
+				D809E708176279C100131AFD /* BtnDownLight2.png */,
+				D809E709176279C100131AFD /* Knob2.png */,
+				D809E70A176279C100131AFD /* Level2.png */,
+				D809E70B176279C100131AFD /* Pointer2.png */,
+				D809E70C176279C100131AFD /* Reflection2.png */,
 				D88CFAC31760BD3B000CC974 /* Background-01.png */,
 				D88CFAC41760BD3B000CC974 /* Btn_engaged.png */,
 				D88CFAC51760BD3B000CC974 /* KnobFixins.png */,
@@ -328,6 +352,14 @@
 				D88CFACA1760BD3B000CC974 /* KnobFixins.png in Resources */,
 				D88CFACB1760BD3B000CC974 /* Pointer.png in Resources */,
 				D88CFACC1760BD3B000CC974 /* Reflections.png in Resources */,
+				D809E70D176279C100131AFD /* Background2-01.png in Resources */,
+				D809E70E176279C100131AFD /* Btn2.png in Resources */,
+				D809E70F176279C100131AFD /* BtnDown2.png in Resources */,
+				D809E710176279C100131AFD /* BtnDownLight2.png in Resources */,
+				D809E711176279C100131AFD /* Knob2.png in Resources */,
+				D809E712176279C100131AFD /* Level2.png in Resources */,
+				D809E713176279C100131AFD /* Pointer2.png in Resources */,
+				D809E714176279C100131AFD /* Reflection2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
