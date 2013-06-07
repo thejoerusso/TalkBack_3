@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="2" customClass="talkBackViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Background-01.png" translatesAutoresizingMaskIntoConstraints="NO" id="WvK-kc-KPQ"/>
@@ -55,14 +55,14 @@
                         <constraints>
                             <constraint firstItem="WvK-kc-KPQ" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="7Xq-65-UwK"/>
                             <constraint firstItem="WvK-kc-KPQ" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Abo-kK-1b6"/>
-                            <constraint firstItem="xA5-lb-UXZ" firstAttribute="centerX" secondItem="WvK-kc-KPQ" secondAttribute="centerX" type="default" id="NVE-bq-nlU"/>
                             <constraint firstItem="WvK-kc-KPQ" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="TlA-eb-wal"/>
-                            <constraint firstItem="CWj-QD-F3Z" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="20" type="user" id="ZrM-Qs-Yd4"/>
-                            <constraint firstItem="CWj-QD-F3Z" firstAttribute="top" secondItem="3" secondAttribute="top" constant="30" id="ebA-F0-a5B"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xA5-lb-UXZ" secondAttribute="bottom" constant="33" type="user" id="Vqj-Cx-HZj"/>
+                            <constraint firstItem="CWj-QD-F3Z" firstAttribute="top" secondItem="3" secondAttribute="top" constant="16" type="user" id="ZrM-Qs-Yd4"/>
                             <constraint firstItem="xA5-lb-UXZ" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="55" id="lG3-o6-bvm"/>
-                            <constraint firstItem="xA5-lb-UXZ" firstAttribute="top" secondItem="CWj-QD-F3Z" secondAttribute="bottom" constant="30" type="user" id="rgu-Vh-R3t"/>
+                            <constraint firstItem="xA5-lb-UXZ" firstAttribute="top" secondItem="CWj-QD-F3Z" secondAttribute="bottom" priority="993" constant="60" type="user" id="rgu-Vh-R3t"/>
                             <constraint firstItem="xA5-lb-UXZ" firstAttribute="centerX" secondItem="CWj-QD-F3Z" secondAttribute="centerX" type="default" id="s2Z-Iu-Nol"/>
                             <constraint firstItem="WvK-kc-KPQ" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="vi0-0l-MnU"/>
+                            <constraint firstItem="xA5-lb-UXZ" firstAttribute="centerX" secondItem="WvK-kc-KPQ" secondAttribute="centerX" type="default" id="z2b-U3-3YH"/>
                         </constraints>
                     </view>
                     <connections>
@@ -101,6 +101,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
 </document>
