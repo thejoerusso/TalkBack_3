@@ -38,11 +38,8 @@
 		D88CFACA1760BD3B000CC974 /* KnobFixins.png in Resources */ = {isa = PBXBuildFile; fileRef = D88CFAC51760BD3B000CC974 /* KnobFixins.png */; };
 		D88CFACB1760BD3B000CC974 /* Pointer.png in Resources */ = {isa = PBXBuildFile; fileRef = D88CFAC61760BD3B000CC974 /* Pointer.png */; };
 		D88CFACC1760BD3B000CC974 /* Reflections.png in Resources */ = {isa = PBXBuildFile; fileRef = D88CFAC71760BD3B000CC974 /* Reflections.png */; };
-		D8CAF20A17166C04000DE595 /* knobBack.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CAF20917166C04000DE595 /* knobBack.png */; };
-		D8CAF20C17166C3D000DE595 /* knobIndex.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CAF20B17166C3D000DE595 /* knobIndex.png */; };
 		D8F422BD1724A85A0044772E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D8F422BC1724A85A0044772E /* icon.png */; };
 		D8F422BF1724A8750044772E /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8F422BE1724A8750044772E /* icon@2x.png */; };
-		D8FCF35617154F63005F9337 /* Screw.png in Resources */ = {isa = PBXBuildFile; fileRef = D8FCF35517154F63005F9337 /* Screw.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,11 +105,8 @@
 		D88CFAC51760BD3B000CC974 /* KnobFixins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KnobFixins.png; sourceTree = "<group>"; };
 		D88CFAC61760BD3B000CC974 /* Pointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pointer.png; sourceTree = "<group>"; };
 		D88CFAC71760BD3B000CC974 /* Reflections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Reflections.png; sourceTree = "<group>"; };
-		D8CAF20917166C04000DE595 /* knobBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knobBack.png; sourceTree = "<group>"; };
-		D8CAF20B17166C3D000DE595 /* knobIndex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knobIndex.png; sourceTree = "<group>"; };
 		D8F422BC1724A85A0044772E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
 		D8F422BE1724A8750044772E /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
-		D8FCF35517154F63005F9337 /* Screw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screw.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,9 +241,6 @@
 				D88CFAC11760BD26000CC974 /* Btn.png */,
 				D8F422BE1724A8750044772E /* icon@2x.png */,
 				D8F422BC1724A85A0044772E /* icon.png */,
-				D8FCF35517154F63005F9337 /* Screw.png */,
-				D8CAF20B17166C3D000DE595 /* knobIndex.png */,
-				D8CAF20917166C04000DE595 /* knobBack.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -329,9 +320,6 @@
 				D83866B7170F162400491062 /* Default-568h@2x.png in Resources */,
 				D83866BA170F162400491062 /* MainStoryboard.storyboard in Resources */,
 				D83866E9170F179300491062 /* README.markdown in Resources */,
-				D8FCF35617154F63005F9337 /* Screw.png in Resources */,
-				D8CAF20A17166C04000DE595 /* knobBack.png in Resources */,
-				D8CAF20C17166C3D000DE595 /* knobIndex.png in Resources */,
 				D8F422BD1724A85A0044772E /* icon.png in Resources */,
 				D8F422BF1724A8750044772E /* icon@2x.png in Resources */,
 				D88CFAC21760BD26000CC974 /* Btn.png in Resources */,

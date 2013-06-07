@@ -285,6 +285,7 @@ const float MinDistanceSquared = 16.0f;
 	}
 
 	_backgroundImageView.image = image;
+    [_backgroundImageView sizeToFit];
 }
 
 - (UIImage *)backgroundImage
@@ -302,6 +303,7 @@ const float MinDistanceSquared = 16.0f;
 	}
 
 	_foregroundImageView.image = image;
+    [_foregroundImageView sizeToFit];
 }
 
 - (UIImage *)foregroundImage

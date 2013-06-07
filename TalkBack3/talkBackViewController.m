@@ -68,6 +68,8 @@ static const int kOutputChanged;
 	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"Pointer.png"] forState:UIControlStateNormal];
 	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"Pointer.png"] forState:UIControlStateHighlighted];
 	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"Pointer.png"] forState:UIControlStateDisabled];
+    [self.rotaryKnob setForegroundImage:[UIImage imageNamed:@"Reflections.png"]];
+    [self.rotaryKnob setBackgroundImage:[UIImage imageNamed:@"KnobFixins.png"]];//note: this image is also added to the storyboard as a placeholder.
 	self.rotaryKnob.knobImageCenter = CGPointMake(105.0f, 107.0f);
 	[self.rotaryKnob addTarget:self action:@selector(rotaryKnobDidChange) forControlEvents:UIControlEventValueChanged];
     
