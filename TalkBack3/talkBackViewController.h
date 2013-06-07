@@ -18,7 +18,9 @@
 @property (nonatomic, weak) IBOutlet MHRotaryKnob *rotaryKnob;
 @property (nonatomic, weak) IBOutlet UIButton *talkButton;
 
+
 - (IBAction)tbButton:(id)sender;
+- (IBAction)buttonUp:(id)sender;
 
 - (IBAction)rotaryKnobDidChange;
 

@@ -14,6 +14,7 @@ static const int kOutputChanged;
 @interface talkBackViewController ()
 @property (nonatomic, strong) AEAudioController *audioController;
 @property (nonatomic, retain) AEPlaythroughChannel *playthrough;
+@property (nonatomic, retain) NSDate *startDate;
 @end
 
 @implementation talkBackViewController
@@ -65,12 +66,12 @@ static const int kOutputChanged;
 	self.rotaryKnob.defaultValue = self.rotaryKnob.value;
 	self.rotaryKnob.resetsToDefault = YES;
 	self.rotaryKnob.backgroundColor = [UIColor clearColor];
-	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"Pointer.png"] forState:UIControlStateNormal];
-	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"Pointer.png"] forState:UIControlStateHighlighted];
-	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"Pointer.png"] forState:UIControlStateDisabled];
-    [self.rotaryKnob setForegroundImage:[UIImage imageNamed:@"Reflections.png"]];
-    [self.rotaryKnob setBackgroundImage:[UIImage imageNamed:@"KnobFixins.png"]];//note: this image is also added to the storyboard as a placeholder.
-	self.rotaryKnob.knobImageCenter = CGPointMake(105.0f, 107.0f);
+	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"Pointer2.png"] forState:UIControlStateNormal];
+	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"Pointer2.png"] forState:UIControlStateHighlighted];
+	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"Pointer2.png"] forState:UIControlStateDisabled];
+    [self.rotaryKnob setForegroundImage:[UIImage imageNamed:@"Reflection2.png"]];
+    [self.rotaryKnob setBackgroundImage:[UIImage imageNamed:@"Knob2.png"]];//note: this image is also added to the storyboard as a placeholder.
+	self.rotaryKnob.knobImageCenter = CGPointMake(105.0f, 105.0f);
 	[self.rotaryKnob addTarget:self action:@selector(rotaryKnobDidChange) forControlEvents:UIControlEventValueChanged];
     
     //----------------------------------------------
@@ -117,18 +118,18 @@ static const int kOutputChanged;
 }
 
 - (IBAction)tbButton:(id)sender {
-    //TODO: Make this "momentoggle"
     UIButton *button = (UIButton *)sender;
-
-        //TODO: Workaround for touch down not setting "highlighted" button state. Is there a way around this?
-        [button setImage:[UIImage imageNamed:@"BtnDownLight2.png"] forState:UIControlStateNormal];
+    
+    _startDate = [NSDate date];
+    
+    [button setImage:[UIImage imageNamed:@"BtnDownLight2.png"] forState:UIControlStateNormal];//change img on touch down
         
     if (button.selected==NO && [_audioController.audioRoute isEqualToString:@"HeadphonesAndMicrophone"]) {
-        button.selected=YES;
+        _talkButton.selected=YES;
         _playthrough.channelIsMuted=NO;
-        NSLog(@"ON");                
+        NSLog(@"ON");
     }
-    
+      
     else if (button.selected==NO && [_audioController.audioRoute isEqualToString:@"SpeakerAndMicrophone"]) {
         button.selected=NO;
         _playthrough.channelIsMuted=YES;
@@ -145,6 +146,18 @@ static const int kOutputChanged;
         [button setImage:[UIImage imageNamed:@"Btn2.png"] forState:UIControlStateNormal];
     }
     
+}
+-(IBAction)buttonUp:(id)sender
+{
+    UIButton *button = (UIButton *)sender;
+    NSTimeInterval pressedForInSeconds = [[NSDate date] timeIntervalSince1970] - [_startDate timeIntervalSince1970];
+    NSLog(@"button was pressed for: %f seconds", pressedForInSeconds);
+    if (pressedForInSeconds > 0.4) {
+        button.selected=NO;
+        _playthrough.channelIsMuted=YES;
+        NSLog(@"OFF");
+        [button setImage:[UIImage imageNamed:@"Btn2.png"] forState:UIControlStateNormal];
+    }
 }
 
 - (IBAction)rotaryKnobDidChange
@@ -169,11 +182,10 @@ static const int kOutputChanged;
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 1) {
-    //speakers are on user wants to turn talkbakc on anyway
+    //speakers are on, user wants to turn talkback on anyway
     _talkButton.selected=YES;
     _playthrough.channelIsMuted=NO;
     NSLog(@"ON");
     }
 }
-
 @end
