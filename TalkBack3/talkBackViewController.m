@@ -68,7 +68,7 @@ static const int kOutputChanged;
 	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"Pointer.png"] forState:UIControlStateNormal];
 	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"Pointer.png"] forState:UIControlStateHighlighted];
 	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"Pointer.png"] forState:UIControlStateDisabled];
-	self.rotaryKnob.knobImageCenter = CGPointMake(80.0f, 80.0f);
+	self.rotaryKnob.knobImageCenter = CGPointMake(105.0f, 105.0f);
 	[self.rotaryKnob addTarget:self action:@selector(rotaryKnobDidChange) forControlEvents:UIControlEventValueChanged];
     
     //----------------------------------------------

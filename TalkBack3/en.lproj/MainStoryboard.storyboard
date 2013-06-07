@@ -15,32 +15,29 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Background-01.png" translatesAutoresizingMaskIntoConstraints="NO" id="WvK-kc-KPQ"/>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xA5-lb-UXZ" customClass="MHRotaryKnob">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="KnobFixins.png" translatesAutoresizingMaskIntoConstraints="NO" id="cdh-W5-8cB">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="KnobFixins.png" translatesAutoresizingMaskIntoConstraints="NO" id="cdh-W5-8cB"/>
+                                    <imageView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="Reflections.png" translatesAutoresizingMaskIntoConstraints="NO" id="3u1-ee-mUw">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="160" type="user" id="zwO-wU-DSI"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView opaque="NO" autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="Reflections.png" translatesAutoresizingMaskIntoConstraints="NO" id="3u1-ee-mUw">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="148" id="9QM-yO-qlQ"/>
-                                            <constraint firstAttribute="height" constant="148" id="R0c-R7-8xW"/>
+                                            <constraint firstAttribute="height" constant="196" id="0G5-93-vAp"/>
+                                            <constraint firstAttribute="width" constant="196" id="u0n-Zk-Z4V"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="cdh-W5-8cB" firstAttribute="top" secondItem="xA5-lb-UXZ" secondAttribute="top" type="default" id="FmL-0q-9mC"/>
-                                    <constraint firstAttribute="height" constant="160" type="user" id="Xla-Hm-73Q"/>
+                                    <constraint firstItem="cdh-W5-8cB" firstAttribute="bottom" secondItem="xA5-lb-UXZ" secondAttribute="bottom" type="default" id="56Z-nJ-ahG"/>
+                                    <constraint firstItem="cdh-W5-8cB" firstAttribute="top" secondItem="xA5-lb-UXZ" secondAttribute="top" type="default" id="OOg-OA-EUm"/>
+                                    <constraint firstAttribute="height" constant="210" type="user" id="cCh-JE-Xes"/>
                                     <constraint firstItem="3u1-ee-mUw" firstAttribute="centerY" secondItem="cdh-W5-8cB" secondAttribute="centerY" type="default" id="cim-EO-NhL"/>
-                                    <constraint firstItem="cdh-W5-8cB" firstAttribute="leading" secondItem="xA5-lb-UXZ" secondAttribute="leading" type="default" id="nul-VX-9sk"/>
-                                    <constraint firstItem="3u1-ee-mUw" firstAttribute="centerX" secondItem="cdh-W5-8cB" secondAttribute="centerX" type="default" id="qWN-EE-YJT"/>
-                                    <constraint firstItem="cdh-W5-8cB" firstAttribute="trailing" secondItem="xA5-lb-UXZ" secondAttribute="trailing" type="default" id="v94-sK-bPM"/>
+                                    <constraint firstItem="3u1-ee-mUw" firstAttribute="centerX" secondItem="cdh-W5-8cB" secondAttribute="centerX" type="default" id="dyk-HC-ZgV"/>
+                                    <constraint firstItem="cdh-W5-8cB" firstAttribute="leading" secondItem="xA5-lb-UXZ" secondAttribute="leading" type="default" id="uFO-ba-s4W"/>
+                                    <constraint firstItem="cdh-W5-8cB" firstAttribute="trailing" secondItem="xA5-lb-UXZ" secondAttribute="trailing" type="default" id="yaE-MY-EcS"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWj-QD-F3Z">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="VWr-XD-U9X"/>
-                                    <constraint firstAttribute="height" constant="151" id="sWk-4q-O5H"/>
+                                    <constraint firstAttribute="height" constant="175" type="user" id="ASA-HJ-wT1"/>
+                                    <constraint firstAttribute="width" constant="175" id="ZKJ-JE-Bgl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="Btn.png">
@@ -56,15 +53,16 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="xA5-lb-UXZ" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="80" id="5lJ-Z7-5Fj"/>
                             <constraint firstItem="WvK-kc-KPQ" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="7Xq-65-UwK"/>
                             <constraint firstItem="WvK-kc-KPQ" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Abo-kK-1b6"/>
+                            <constraint firstItem="xA5-lb-UXZ" firstAttribute="centerX" secondItem="WvK-kc-KPQ" secondAttribute="centerX" type="default" id="NVE-bq-nlU"/>
                             <constraint firstItem="WvK-kc-KPQ" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="TlA-eb-wal"/>
-                            <constraint firstItem="CWj-QD-F3Z" firstAttribute="top" secondItem="3" secondAttribute="top" constant="61" id="WFo-cN-UMj"/>
-                            <constraint firstItem="xA5-lb-UXZ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="284" id="c8T-Km-ZSz"/>
+                            <constraint firstItem="CWj-QD-F3Z" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="20" type="user" id="ZrM-Qs-Yd4"/>
+                            <constraint firstItem="CWj-QD-F3Z" firstAttribute="top" secondItem="3" secondAttribute="top" constant="30" id="ebA-F0-a5B"/>
+                            <constraint firstItem="xA5-lb-UXZ" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="55" id="lG3-o6-bvm"/>
+                            <constraint firstItem="xA5-lb-UXZ" firstAttribute="top" secondItem="CWj-QD-F3Z" secondAttribute="bottom" constant="30" type="user" id="rgu-Vh-R3t"/>
                             <constraint firstItem="xA5-lb-UXZ" firstAttribute="centerX" secondItem="CWj-QD-F3Z" secondAttribute="centerX" type="default" id="s2Z-Iu-Nol"/>
                             <constraint firstItem="WvK-kc-KPQ" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="vi0-0l-MnU"/>
-                            <constraint firstItem="xA5-lb-UXZ" firstAttribute="centerX" secondItem="WvK-kc-KPQ" secondAttribute="centerX" type="default" id="whq-WV-z7D"/>
                         </constraints>
                     </view>
                     <connections>
