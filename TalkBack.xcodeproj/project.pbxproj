@@ -73,7 +73,7 @@
 		D809E718176286D100131AFD /* Knob2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Knob2@2x.png"; sourceTree = "<group>"; };
 		D809E719176286D100131AFD /* Pointer2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pointer2@2x.png"; sourceTree = "<group>"; };
 		D809E71A176286D100131AFD /* Reflection2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Reflection2@2x.png"; sourceTree = "<group>"; };
-		D809E72117628ED300131AFD /* Level2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Level2@2x.png"; path = "TalkBack3/Images/Level2@2x.png"; sourceTree = "<group>"; };
+		D809E72117628ED300131AFD /* Level2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Level2@2x.png"; sourceTree = "<group>"; };
 		D838669D170F162400491062 /* TalkBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D83866A0170F162400491062 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D83866A2170F162400491062 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -142,7 +142,6 @@
 		D8386694170F162400491062 = {
 			isa = PBXGroup;
 			children = (
-				D809E72117628ED300131AFD /* Level2@2x.png */,
 				D83866C3170F16C800491062 /* TheAmazingAudioEngine.xcodeproj */,
 				D83866A6170F162400491062 /* TalkBack */,
 				D838669F170F162400491062 /* Frameworks */,
@@ -246,6 +245,7 @@
 		D87A1CB217127336009A8A2D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D809E72117628ED300131AFD /* Level2@2x.png */,
 				D809E715176286D100131AFD /* Btn2@2x.png */,
 				D809E716176286D100131AFD /* BtnDown2@2x.png */,
 				D809E717176286D100131AFD /* BtnDownLight2@2x.png */,
@@ -478,15 +478,15 @@
 		D83866C2170F162400491062 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Joseph Russo";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Joseph Russo";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TalkBack3/TalkBack-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = TheAmazingAudioEngine/TheAmazingAudioEngine;
 				INFOPLIST_FILE = "TalkBack3/TalkBack-Info.plist";
 				PRODUCT_NAME = TalkBack;
-				PROVISIONING_PROFILE = "9B4468DB-7B0C-4FAD-A3FE-DEE790E5B0FC";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9B4468DB-7B0C-4FAD-A3FE-DEE790E5B0FC";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3614DA3C-7C82-4B54-BD8B-6D35A5873E44";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
