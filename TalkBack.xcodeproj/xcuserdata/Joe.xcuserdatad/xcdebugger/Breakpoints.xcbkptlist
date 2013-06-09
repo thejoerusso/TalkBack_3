@@ -11,19 +11,6 @@
          timestampString = "392340290.794517"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "42"
-         endingLineNumber = "42"
-         landmarkName = "-handleEnteredBackground"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "TalkBack3/talkBackViewController.m"
-         timestampString = "392340290.794517"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
          startingLineNumber = "16"
          endingLineNumber = "16"
          landmarkName = "playthrough"

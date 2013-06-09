@@ -19,38 +19,6 @@ static const int kOutputChanged;
 
 @implementation talkBackViewController
 
-
--(void)observeValueForKeyPath:(NSString *)keyPath
-                     ofObject:(id)object
-                       change:(NSDictionary *)change
-                      context:(void *)context {
-    if ( context == &kAudioRouteChanged ) {
-        BOOL headphonesAreConnected = [_audioController.audioRoute isEqualToString:@"HeadphonesAndMicrophone"];
-        //Cut talkback if phones are pulled.
-        if(headphonesAreConnected == NO){
-            //NSLog(@"no phones!!");
-            _playthrough.channelIsMuted=YES;
-            _talkButton.selected=NO;
-            [_talkButton setImage:[UIImage imageNamed:@"Btn2.png"] forState:UIControlStateNormal];
-        }
-    }
-}
-
-//If talkback is not on, stop the audio engine so it does not continue in the background.
--(void)handleEnteredBackground{
-    if (_talkButton.selected==NO) {
-        //kill audio
-        [_audioController stop];
-    }
-}
-
--(void)handleEnterForeground{
-    //start audio engine if not already running
-    if (_audioController.running==NO) {
-        [_audioController start:NULL];
-    }
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -111,11 +79,13 @@ static const int kOutputChanged;
                                                object: nil];
 }
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 - (IBAction)tbButton:(id)sender {
     UIButton *button = (UIButton *)sender;
@@ -145,8 +115,9 @@ static const int kOutputChanged;
          NSLog(@"OFF");
         [button setImage:[UIImage imageNamed:@"Btn2.png"] forState:UIControlStateNormal];
     }
-    
 }
+
+
 -(IBAction)buttonUp:(id)sender
 {
     UIButton *button = (UIButton *)sender;
@@ -160,32 +131,71 @@ static const int kOutputChanged;
     }
 }
 
+
 - (IBAction)rotaryKnobDidChange
 {	
 	_playthrough.volume=self.rotaryKnob.value;
 }
 
-- (void)dealloc
-{
-        //TODO: Move these??
-        [_audioController removeObserver:self forKeyPath:@"audioRoute"];
-        [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
-        if ( _playthrough ) {
-            [_audioController removeInputReceiver:_playthrough];
-            self.playthrough = nil;
-        }
-        self.audioController = nil;
-    
-}
 
+//warn user if about to cause feedback
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 1) {
-    //speakers are on, user wants to turn talkback on anyway
     _talkButton.selected=YES;
     _playthrough.channelIsMuted=NO;
     NSLog(@"ON");
     }
+}
+
+
+//kill tb if phones pulled
+-(void)observeValueForKeyPath:(NSString *)keyPath
+                     ofObject:(id)object
+                       change:(NSDictionary *)change
+                      context:(void *)context {
+    if ( context == &kAudioRouteChanged ) {
+        BOOL headphonesAreConnected = [_audioController.audioRoute isEqualToString:@"HeadphonesAndMicrophone"];
+        //Cut talkback if phones are pulled.
+        if(headphonesAreConnected == NO){
+            //NSLog(@"no phones!!");
+            _playthrough.channelIsMuted=YES;
+            _talkButton.selected=NO;
+            [_talkButton setImage:[UIImage imageNamed:@"Btn2.png"] forState:UIControlStateNormal];
+        }
+    }
+}
+
+
+
+//If talkback is not on, stop the audio engine so it does not continue in the background.
+-(void)handleEnteredBackground{
+    if (_talkButton.selected==NO) {
+        //kill audio
+        [_audioController stop];
+    }
+}
+
+
+//start audio engine if not already running
+-(void)handleEnterForeground{
+    if (_audioController.running==NO) {
+        [_audioController start:NULL];
+    }
+}
+
+
+- (void)dealloc
+{
+    //TODO: Move these??
+    [_audioController removeObserver:self forKeyPath:@"audioRoute"];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    if ( _playthrough ) {
+        [_audioController removeInputReceiver:_playthrough];
+        self.playthrough = nil;
+    }
+    self.audioController = nil;
+    
 }
 @end
