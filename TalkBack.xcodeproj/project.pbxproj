@@ -450,7 +450,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -458,6 +459,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -478,15 +481,15 @@
 		D83866C2170F162400491062 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Joseph Russo";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Joseph Russo";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TalkBack3/TalkBack-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = TheAmazingAudioEngine/TheAmazingAudioEngine;
 				INFOPLIST_FILE = "TalkBack3/TalkBack-Info.plist";
 				PRODUCT_NAME = TalkBack;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3614DA3C-7C82-4B54-BD8B-6D35A5873E44";
+				PROVISIONING_PROFILE = "FBA315BE-0B28-463C-9EE7-285DE9DE9D76";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FBA315BE-0B28-463C-9EE7-285DE9DE9D76";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

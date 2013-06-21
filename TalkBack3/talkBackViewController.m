@@ -64,7 +64,10 @@ static const int kOutputChanged;
     _playthrough.channelIsMuted=YES;
     
     //observe changes in audioRoute (ie:headphones pulled)
-    [_audioController addObserver:self forKeyPath:@"audioRoute" options:0 context:(void*)&kAudioRouteChanged];
+    [_audioController                     addObserver:self
+                                           forKeyPath:@"audioRoute"
+                                              options:0
+                                              context:(void*)&kAudioRouteChanged];
     
     //observe for entering background
     [[NSNotificationCenter defaultCenter] addObserver: self
