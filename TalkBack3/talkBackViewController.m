@@ -80,6 +80,17 @@ static const int kOutputChanged;
                                              selector: @selector(handleEnterForeground)
                                                  name: UIApplicationWillEnterForegroundNotification
                                                object: nil];
+    
+    if ([_audioController.audioRoute isEqualToString:@"HeadphonesAndMicrophone"]) {
+        _talkButton.enabled=YES;
+        _headPhone.hidden=YES;
+        _label.hidden=YES;
+    }
+    else{
+        _talkButton.enabled=NO;
+        _headPhone.hidden=NO;
+        _label.hidden=NO;
+    }
 }
 
 
@@ -97,21 +108,12 @@ static const int kOutputChanged;
     
     [button setImage:[UIImage imageNamed:@"BtnDownLight2.png"] forState:UIControlStateNormal];//change img on touch down
         
-    if (button.selected==NO && [_audioController.audioRoute isEqualToString:@"HeadphonesAndMicrophone"]) {
+    if (button.selected==NO) {
         _talkButton.selected=YES;
         _playthrough.channelIsMuted=NO;
         NSLog(@"ON");
     }
-      
-    else if (button.selected==NO && [_audioController.audioRoute isEqualToString:@"SpeakerAndMicrophone"]) {
-        button.selected=NO;
-        _playthrough.channelIsMuted=YES;
-        [button setImage:[UIImage imageNamed:@"Btn2.png"] forState:UIControlStateNormal];
-        //NSLog(@"CONNECT SOMETHING!");
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"This may cause feedback." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
-        [alert show];
-    }
-    
+
     else{
         button.selected=NO;
         _playthrough.channelIsMuted=YES;
@@ -141,18 +143,7 @@ static const int kOutputChanged;
 }
 
 
-//warn user if about to cause feedback
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex == 1) {
-    _talkButton.selected=YES;
-    _playthrough.channelIsMuted=NO;
-    NSLog(@"ON");
-    }
-}
-
-
-//kill tb if phones pulled
+//Listen for change in audioroute and kill talkback or enable button
 -(void)observeValueForKeyPath:(NSString *)keyPath
                      ofObject:(id)object
                        change:(NSDictionary *)change
@@ -161,10 +152,24 @@ static const int kOutputChanged;
         BOOL headphonesAreConnected = [_audioController.audioRoute isEqualToString:@"HeadphonesAndMicrophone"];
         //Cut talkback if phones are pulled.
         if(headphonesAreConnected == NO){
-            //NSLog(@"no phones!!");
+            NSLog(@"no phones!!");
             _playthrough.channelIsMuted=YES;
             _talkButton.selected=NO;
+            _talkButton.enabled=NO;
+            _headPhone.hidden=NO;
+            _label.hidden=NO;
             [_talkButton setImage:[UIImage imageNamed:@"Btn2.png"] forState:UIControlStateNormal];
+           
+            if(UIApplicationStateBackground){
+                [_audioController stop]; 
+            }
+        }
+        else{
+            _playthrough.channelIsMuted=YES;
+            _talkButton.selected=NO;
+            _talkButton.enabled=YES;
+            _headPhone.hidden=YES;
+            _label.hidden=YES;
         }
     }
 }

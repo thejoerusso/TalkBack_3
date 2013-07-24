@@ -38,14 +38,16 @@
 		D83866E9170F179300491062 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = D83866DE170F179300491062 /* README.markdown */; };
 		D83866EA170F179300491062 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = D83866DF170F179300491062 /* TPCircularBuffer+AudioBufferList.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D83866EB170F179300491062 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = D83866E1170F179300491062 /* TPCircularBuffer.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D8783A011796292000A2FA37 /* 120-headphones.png in Resources */ = {isa = PBXBuildFile; fileRef = D87839FF1796292000A2FA37 /* 120-headphones.png */; };
+		D8783A021796292000A2FA37 /* 120-headphones@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8783A001796292000A2FA37 /* 120-headphones@2x.png */; };
+		D8783A091796399C00A2FA37 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D8783A071796399C00A2FA37 /* icon.png */; };
+		D8783A0A1796399C00A2FA37 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8783A081796399C00A2FA37 /* icon@2x.png */; };
 		D87A1CAF17127290009A8A2D /* MHRotaryKnob.m in Sources */ = {isa = PBXBuildFile; fileRef = D87A1CAE17127290009A8A2D /* MHRotaryKnob.m */; };
 		D87A1CB1171272EE009A8A2D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87A1CB0171272EE009A8A2D /* QuartzCore.framework */; };
 		D88CFAC81760BD3B000CC974 /* Background-01.png in Resources */ = {isa = PBXBuildFile; fileRef = D88CFAC31760BD3B000CC974 /* Background-01.png */; };
 		D88CFACA1760BD3B000CC974 /* KnobFixins.png in Resources */ = {isa = PBXBuildFile; fileRef = D88CFAC51760BD3B000CC974 /* KnobFixins.png */; };
 		D88CFACB1760BD3B000CC974 /* Pointer.png in Resources */ = {isa = PBXBuildFile; fileRef = D88CFAC61760BD3B000CC974 /* Pointer.png */; };
 		D88CFACC1760BD3B000CC974 /* Reflections.png in Resources */ = {isa = PBXBuildFile; fileRef = D88CFAC71760BD3B000CC974 /* Reflections.png */; };
-		D8F422BD1724A85A0044772E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D8F422BC1724A85A0044772E /* icon.png */; };
-		D8F422BF1724A8750044772E /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8F422BE1724A8750044772E /* icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,10 @@
 		D83866E0170F179300491062 /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
 		D83866E1170F179300491062 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
 		D83866E2170F179300491062 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
+		D87839FF1796292000A2FA37 /* 120-headphones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "120-headphones.png"; sourceTree = "<group>"; };
+		D8783A001796292000A2FA37 /* 120-headphones@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "120-headphones@2x.png"; sourceTree = "<group>"; };
+		D8783A071796399C00A2FA37 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		D8783A081796399C00A2FA37 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		D87A1CAD17127290009A8A2D /* MHRotaryKnob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHRotaryKnob.h; sourceTree = "<group>"; };
 		D87A1CAE17127290009A8A2D /* MHRotaryKnob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHRotaryKnob.m; sourceTree = "<group>"; };
 		D87A1CB0171272EE009A8A2D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -117,8 +123,6 @@
 		D88CFAC51760BD3B000CC974 /* KnobFixins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KnobFixins.png; sourceTree = "<group>"; };
 		D88CFAC61760BD3B000CC974 /* Pointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pointer.png; sourceTree = "<group>"; };
 		D88CFAC71760BD3B000CC974 /* Reflections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Reflections.png; sourceTree = "<group>"; };
-		D8F422BC1724A85A0044772E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
-		D8F422BE1724A8750044772E /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,8 +249,12 @@
 		D87A1CB217127336009A8A2D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D8783A071796399C00A2FA37 /* icon.png */,
+				D8783A081796399C00A2FA37 /* icon@2x.png */,
 				D809E72117628ED300131AFD /* Level2@2x.png */,
 				D809E715176286D100131AFD /* Btn2@2x.png */,
+				D87839FF1796292000A2FA37 /* 120-headphones.png */,
+				D8783A001796292000A2FA37 /* 120-headphones@2x.png */,
 				D809E716176286D100131AFD /* BtnDown2@2x.png */,
 				D809E717176286D100131AFD /* BtnDownLight2@2x.png */,
 				D809E718176286D100131AFD /* Knob2@2x.png */,
@@ -257,8 +265,6 @@
 				D88CFAC51760BD3B000CC974 /* KnobFixins.png */,
 				D88CFAC61760BD3B000CC974 /* Pointer.png */,
 				D88CFAC71760BD3B000CC974 /* Reflections.png */,
-				D8F422BE1724A8750044772E /* icon@2x.png */,
-				D8F422BC1724A85A0044772E /* icon.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -338,8 +344,6 @@
 				D83866B7170F162400491062 /* Default-568h@2x.png in Resources */,
 				D83866BA170F162400491062 /* MainStoryboard.storyboard in Resources */,
 				D83866E9170F179300491062 /* README.markdown in Resources */,
-				D8F422BD1724A85A0044772E /* icon.png in Resources */,
-				D8F422BF1724A8750044772E /* icon@2x.png in Resources */,
 				D88CFAC81760BD3B000CC974 /* Background-01.png in Resources */,
 				D88CFACA1760BD3B000CC974 /* KnobFixins.png in Resources */,
 				D88CFACB1760BD3B000CC974 /* Pointer.png in Resources */,
@@ -352,6 +356,10 @@
 				D809E71F176286D100131AFD /* Pointer2@2x.png in Resources */,
 				D809E720176286D100131AFD /* Reflection2@2x.png in Resources */,
 				D809E72217628ED300131AFD /* Level2@2x.png in Resources */,
+				D8783A011796292000A2FA37 /* 120-headphones.png in Resources */,
+				D8783A021796292000A2FA37 /* 120-headphones@2x.png in Resources */,
+				D8783A091796399C00A2FA37 /* icon.png in Resources */,
+				D8783A0A1796399C00A2FA37 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,8 +496,8 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = TheAmazingAudioEngine/TheAmazingAudioEngine;
 				INFOPLIST_FILE = "TalkBack3/TalkBack-Info.plist";
 				PRODUCT_NAME = TalkBack;
-				PROVISIONING_PROFILE = "FBA315BE-0B28-463C-9EE7-285DE9DE9D76";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FBA315BE-0B28-463C-9EE7-285DE9DE9D76";
+				PROVISIONING_PROFILE = "D379FB2B-8031-4912-874B-99C019A9D0CA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D379FB2B-8031-4912-874B-99C019A9D0CA";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

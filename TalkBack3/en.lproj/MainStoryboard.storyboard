@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -25,10 +25,10 @@
                                     <constraint firstItem="cdh-W5-8cB" firstAttribute="leading" secondItem="xA5-lb-UXZ" secondAttribute="leading" constant="17" id="rY1-sn-ss3"/>
                                 </constraints>
                             </view>
-                            <button autoresizesSubviews="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWj-QD-F3Z">
+                            <button autoresizesSubviews="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWj-QD-F3Z">
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="2uy-Hj-BAR"/>
                                     <constraint firstAttribute="height" constant="168" id="SDr-GB-3Am"/>
-                                    <constraint firstAttribute="width" constant="168" id="eVM-Y8-dM2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" image="Btn2@2x.png">
@@ -48,23 +48,44 @@
                                     <constraint firstAttribute="width" constant="43" id="yX3-JO-kdi"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="120-headphones@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="WOI-Pw-bQq">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="2Gq-2A-oDB"/>
+                                    <constraint firstAttribute="width" constant="18" id="89f-36-aJV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Disconnected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZJ-NJ-Z9n">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="Zax-Pv-Jsc"/>
+                                    <constraint firstAttribute="width" constant="165" id="rAZ-Qf-Wce"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="CWj-QD-F3Z" firstAttribute="centerX" secondItem="xA5-lb-UXZ" secondAttribute="centerX" type="default" id="2bA-nu-dhP"/>
                             <constraint firstItem="KCj-zk-reg" firstAttribute="top" secondItem="xA5-lb-UXZ" secondAttribute="bottom" constant="2" type="user" id="2vN-yw-tdf"/>
                             <constraint firstItem="WvK-kc-KPQ" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="7Xq-65-UwK"/>
                             <constraint firstItem="WvK-kc-KPQ" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Abo-kK-1b6"/>
-                            <constraint firstItem="CWj-QD-F3Z" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="77" id="DTE-r1-UW7"/>
+                            <constraint firstItem="CWj-QD-F3Z" firstAttribute="top" secondItem="3" secondAttribute="top" constant="24" id="Fdv-db-5wT"/>
                             <constraint firstItem="WvK-kc-KPQ" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="TlA-eb-wal"/>
-                            <constraint firstItem="xA5-lb-UXZ" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="56" id="aWf-Lx-YSR"/>
+                            <constraint firstItem="CWj-QD-F3Z" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="77" id="W6a-92-75U"/>
+                            <constraint firstItem="WOI-Pw-bQq" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="93" id="WP6-gl-v44"/>
+                            <constraint firstItem="lZJ-NJ-Z9n" firstAttribute="top" secondItem="WOI-Pw-bQq" secondAttribute="top" type="default" id="ohc-Mi-pJK"/>
+                            <constraint firstItem="lZJ-NJ-Z9n" firstAttribute="leading" secondItem="WOI-Pw-bQq" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="qCh-N3-xa2"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xA5-lb-UXZ" secondAttribute="bottom" constant="49" type="user" id="qac-2K-9ma"/>
+                            <constraint firstItem="WOI-Pw-bQq" firstAttribute="top" secondItem="3" secondAttribute="top" constant="13" id="rCl-2g-fWi"/>
                             <constraint firstItem="KCj-zk-reg" firstAttribute="centerX" secondItem="xA5-lb-UXZ" secondAttribute="centerX" type="default" id="rK6-8z-hZi"/>
                             <constraint firstItem="xA5-lb-UXZ" firstAttribute="top" secondItem="CWj-QD-F3Z" secondAttribute="bottom" priority="993" constant="60" type="user" id="rgu-Vh-R3t"/>
+                            <constraint firstItem="xA5-lb-UXZ" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="56" id="rtd-hH-0Lj"/>
                             <constraint firstItem="WvK-kc-KPQ" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="vi0-0l-MnU"/>
-                            <constraint firstItem="CWj-QD-F3Z" firstAttribute="top" secondItem="3" secondAttribute="top" constant="24" id="wZn-WS-auc"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="headPhone" destination="WOI-Pw-bQq" id="yRh-vl-TNV"/>
+                        <outlet property="label" destination="lZJ-NJ-Z9n" id="fn8-w8-y0H"/>
                         <outlet property="rotaryKnob" destination="xA5-lb-UXZ" id="sg0-Zm-6wH"/>
                         <outlet property="talkButton" destination="CWj-QD-F3Z" id="egH-NK-m0W"/>
                     </connections>
@@ -74,12 +95,33 @@
         </scene>
     </scenes>
     <resources>
+        <image name="120-headphones@2x.png" width="44" height="42"/>
         <image name="Background2-01.png" width="640" height="1136"/>
         <image name="Btn2@2x.png" width="336" height="336"/>
         <image name="BtnDownLight2.png" width="16" height="16"/>
         <image name="KnobFixins.png" width="210" height="210"/>
         <image name="Level2@2x.png" width="82" height="41"/>
     </resources>
+    <classes>
+        <class className="MHRotaryKnob" superclassName="UIControl">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MHRotaryKnob.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="talkBackViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/talkBackViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonUp:"/>
+                <relationship kind="action" name="rotaryKnobDidChange"/>
+                <relationship kind="action" name="tbButton:"/>
+                <relationship kind="outlet" name="headPhone" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="rotaryKnob" candidateClass="MHRotaryKnob"/>
+                <relationship kind="outlet" name="talkButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

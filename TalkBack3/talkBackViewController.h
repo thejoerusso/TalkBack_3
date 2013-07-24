@@ -17,6 +17,8 @@
 
 @property (nonatomic, weak) IBOutlet MHRotaryKnob *rotaryKnob;
 @property (nonatomic, weak) IBOutlet UIButton *talkButton;
+@property (nonatomic, weak) IBOutlet UIImageView *headPhone;
+@property (nonatomic, weak) IBOutlet UILabel *label;
 
 
 - (IBAction)tbButton:(id)sender;
