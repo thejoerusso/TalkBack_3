@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "TalkBack3/talkBackViewController.m"
-         timestampString = "392340290.794517"
+         timestampString = "397437054.520744"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "16"
-         endingLineNumber = "16"
+         startingLineNumber = "20"
+         endingLineNumber = "20"
          landmarkName = "playthrough"
          landmarkType = "19">
       </FileBreakpoint>
@@ -21,13 +21,37 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "TalkBack3/talkBackViewController.m"
-         timestampString = "395717557.436231"
+         timestampString = "397440124.195735"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "125"
-         endingLineNumber = "125"
+         startingLineNumber = "133"
+         endingLineNumber = "133"
          landmarkName = "@implementation talkBackViewController"
          landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "TalkBack3/talkBackViewController.m"
+         timestampString = "397440124.195735"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "208"
+         endingLineNumber = "208"
+         landmarkName = "-handleActive"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "TalkBack3/talkBackViewController.h"
+         timestampString = "397438935.21154"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "16"
+         endingLineNumber = "16">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

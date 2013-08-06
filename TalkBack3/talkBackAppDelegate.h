@@ -11,5 +11,6 @@
 @interface talkBackAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, weak) IBOutlet UIButton *talkButton;
 
 @end

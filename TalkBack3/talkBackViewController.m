@@ -8,8 +8,12 @@
 
 #import "talkBackViewController.h"
 #import "MHRotaryKnob.h"
+#import "JRTalkController.h"
+
 
 static const int kOutputChanged;
+BOOL foreground;
+BOOL interrupted;
 
 @interface talkBackViewController ()
 @property (nonatomic, strong) AEAudioController *audioController;
@@ -49,12 +53,7 @@ static const int kOutputChanged;
                             initWithAudioDescription:[AEAudioController nonInterleaved16BitStereoAudioDescription]
                             inputEnabled:YES];
     
-    NSError *error = NULL;
-    BOOL result = [_audioController start:&error];
-    if ( !result ) {
-        // Report error
-    }
-    //Turn playthrough on
+        //Turn playthrough on
     self.playthrough = [[AEPlaythroughChannel alloc] initWithAudioController:_audioController];
     [_audioController addInputReceiver:_playthrough];
     [_audioController addChannels:[NSArray arrayWithObject:_playthrough]];
@@ -62,6 +61,16 @@ static const int kOutputChanged;
     //but keep it muted
     _playthrough.volume=0;
     _playthrough.channelIsMuted=YES;
+    
+    NSError *error = NULL;
+    BOOL result = [_audioController start:&error];
+    if ( !result ) {
+        // Report error
+    }
+    
+    //----------------------------------------------
+    //OBSERVER SETUP
+    //----------------------------------------------
     
     //observe changes in audioRoute (ie:headphones pulled)
     [_audioController                     addObserver:self
@@ -81,6 +90,12 @@ static const int kOutputChanged;
                                                  name: UIApplicationWillEnterForegroundNotification
                                                object: nil];
     
+    //observe for entering active
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(handleActive)
+                                                 name: UIApplicationDidBecomeActiveNotification
+                                               object: nil];
+    
     if ([_audioController.audioRoute isEqualToString:@"HeadphonesAndMicrophone"]) {
         _talkButton.enabled=YES;
         _headPhone.hidden=YES;
@@ -91,13 +106,6 @@ static const int kOutputChanged;
         _headPhone.hidden=NO;
         _label.hidden=NO;
     }
-}
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -160,38 +168,49 @@ static const int kOutputChanged;
             _label.hidden=NO;
             [_talkButton setImage:[UIImage imageNamed:@"Btn2.png"] forState:UIControlStateNormal];
            
-            if(UIApplicationStateBackground){
+            if(foreground == NO){
                 [_audioController stop]; 
             }
         }
-        else{
+        else{  
             _playthrough.channelIsMuted=YES;
             _talkButton.selected=NO;
             _talkButton.enabled=YES;
             _headPhone.hidden=YES;
             _label.hidden=YES;
+            if(foreground == YES){
+                if (_audioController.running==NO) {
+                    [_audioController start:NULL];
+                }
+            }
         }
     }
 }
 
-
-
 //If talkback is not on, stop the audio engine so it does not continue in the background.
 -(void)handleEnteredBackground{
+        foreground=NO;
     if (_talkButton.selected==NO) {
         //kill audio
         [_audioController stop];
     }
 }
 
-
-//start audio engine if not already running
+//Start audio engine if not already running
 -(void)handleEnterForeground{
+        foreground=YES;
     if (_audioController.running==NO) {
         [_audioController start:NULL];
     }
 }
 
+-(void)handleActive{
+    NSLog(@"active");
+    if (_playthrough.channelIsMuted == YES) {
+        _talkButton.selected=NO;
+        [_talkButton setImage:[UIImage imageNamed:@"Btn2.png"] forState:UIControlStateNormal];
+    }
+}
 
 - (void)dealloc
 {

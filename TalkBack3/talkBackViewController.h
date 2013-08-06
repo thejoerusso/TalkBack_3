@@ -12,6 +12,8 @@
 #import <UIKit/UIKit.h>
 #import "AEPlaythroughChannel.h"
 #import "TheAmazingAudioEngine.h"
+#import "JRTalkController.h"
+
 
 @interface talkBackViewController : UIViewController <UIAlertViewDelegate>
 
@@ -20,10 +22,8 @@
 @property (nonatomic, weak) IBOutlet UIImageView *headPhone;
 @property (nonatomic, weak) IBOutlet UILabel *label;
 
-
 - (IBAction)tbButton:(id)sender;
 - (IBAction)buttonUp:(id)sender;
-
 - (IBAction)rotaryKnobDidChange;
 
 @end
